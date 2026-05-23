@@ -1,0 +1,9 @@
+# Large zip files (exceed GitHub size limit)
+*.zip
+
+# PSD source files
+*.psd
+
+# OS files
+.DS_Store
+Thumbs.db

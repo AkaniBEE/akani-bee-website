@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
 <?php include 'includes/head.php'; ?>
-<title>POPIA Statement - Together We Build</title>
-<meta name="description" content="Akani BEE Ratings POPIA statement - how we protect your personal information.">
+<title>POPIA Privacy Statement | Data Protection | Akani BEE Ratings</title>
+<meta name="description" content="How Akani BEE Ratings collects, processes, and protects your personal information during B-BBEE verification under POPIA.">
+<meta property="og:title" content="POPIA Privacy Statement | Akani BEE Ratings">
+<meta property="og:description" content="How we protect your personal information during B-BBEE verification, in compliance with POPIA.">
+<meta property="og:url" content="https://akanibee.co.za/popia-statement.php">
 </head>
 <body class="bg-white text-secondary antialiased">
 

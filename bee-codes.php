@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
 <?php include 'includes/head.php'; ?>
-<title>B-BBEE Codes - Together We Build</title>
-<meta name="description" content="Download B-BBEE codes of good practice, sector codes, and related documentation.">
+<title>B-BBEE Codes of Good Practice & Sector Codes | Akani BEE Ratings</title>
+<meta name="description" content="Download B-BBEE Codes of Good Practice and sector codes for transport, agriculture, finance, ICT, construction and more.">
+<meta name="keywords" content="B-BBEE codes of good practice, BEE sector codes, amended BEE codes, BEE codes download, construction BEE code, ICT sector code, financial sector BEE code">
+<meta property="og:title" content="B-BBEE Codes of Good Practice | Sector Codes Download">
+<meta property="og:description" content="Access and download the latest B-BBEE codes of good practice and sector-specific codes for compliance in South Africa.">
+<meta property="og:url" content="https://akanibee.co.za/bee-codes.php">
 </head>
 <body class="bg-white text-secondary antialiased">
 

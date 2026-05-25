@@ -2,7 +2,31 @@
 // Usage: $page_title, $page_subtitle, $breadcrumbs (array of ['label'=>'', 'url'=>''])
 // $hero_bg (optional background image)
 $hero_bg = isset($hero_bg) ? $hero_bg : 'images/background/bg-page-title-1.png';
+
+// Generate BreadcrumbList schema
+if (isset($breadcrumbs) && !empty($breadcrumbs)):
+  $schema_items = [];
+  $schema_items[] = ['@type' => 'ListItem', 'position' => 1, 'name' => 'Home', 'item' => 'https://akanibee.co.za/'];
+  $pos = 2;
+  foreach ($breadcrumbs as $crumb) {
+    $item = ['@type' => 'ListItem', 'position' => $pos, 'name' => $crumb['label']];
+    if (isset($crumb['url']) && $crumb['url'] !== '#') {
+      $item['item'] = 'https://akanibee.co.za/' . $crumb['url'];
+    } elseif ($pos === count($breadcrumbs) + 1) {
+      $item['item'] = 'https://akanibee.co.za/' . basename($_SERVER['PHP_SELF']);
+    }
+    $schema_items[] = $item;
+    $pos++;
+  }
 ?>
+<script type="application/ld+json">
+<?= json_encode([
+  '@context' => 'https://schema.org',
+  '@type' => 'BreadcrumbList',
+  'itemListElement' => $schema_items
+], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>
+</script>
+<?php endif; ?>
 <section class="relative overflow-hidden bg-secondary">
   <!-- Background Image -->
   <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('<?= htmlspecialchars($hero_bg, ENT_QUOTES, 'UTF-8') ?>')"></div>

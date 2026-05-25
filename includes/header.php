@@ -69,6 +69,7 @@ $cp = $current_page !== basename($_SERVER['PHP_SELF']) ? $current_page : $curren
           <div x-show="open" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" class="absolute left-0 mt-1 w-56 rounded-xl border border-border bg-white shadow-xl p-1.5">
             <a href="what-we-offer.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">What We Offer</a>
             <a href="our-process.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">Our Process</a>
+            <a href="services.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">All Services</a>
           </div>
         </div>
 
@@ -137,6 +138,7 @@ $cp = $current_page !== basename($_SERVER['PHP_SELF']) ? $current_page : $curren
         <div x-show="open" x-cloak class="pl-4 space-y-1 mt-1">
           <a href="what-we-offer.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">What We Offer</a>
           <a href="our-process.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">Our Process</a>
+          <a href="services.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">All Services</a>
         </div>
       </div>
 

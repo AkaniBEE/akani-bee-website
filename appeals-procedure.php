@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
 <?php include 'includes/head.php'; ?>
-<title>Appeals Procedure - Together We Build</title>
-<meta name="description" content="Akani BEE Ratings formal appeals procedure for B-BBEE verification disputes.">
+<title>B-BBEE Verification Appeals Procedure | Akani BEE Ratings</title>
+<meta name="description" content="Formal appeals procedure for B-BBEE verification disputes. Step-by-step guide to submitting and resolving appeals.">
+<meta property="og:title" content="B-BBEE Verification Appeals Procedure | Akani BEE Ratings">
+<meta property="og:description" content="Our structured, step-by-step process for handling B-BBEE verification appeals and disputes.">
+<meta property="og:url" content="https://akanibee.co.za/appeals-procedure.php">
 </head>
 <body class="bg-white text-secondary antialiased">
 

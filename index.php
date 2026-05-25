@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
 <?php include 'includes/head.php'; ?>
-<title>Akani BEE Ratings - Together We Build</title>
-<meta name="description" content="Akani Bee Ratings offers comprehensive B-BBEE Verifications, Evidence Collation, and BEE Training and Insights to help businesses with new certifications, renewals, and understanding the dynamics around BEE.">
-<meta name="keywords" content="B-BBEE Verifications, Evidence Collation, BEE Training, BEE Insights, Gap Analysis, B-BBEE Certification, B-BBEE Renewals, Transformative Solutions, BEE Podcasts">
+<title>B-BBEE Verification Agency in South Africa | Akani BEE Ratings</title>
+<meta name="description" content="SANAS-accredited B-BBEE verification agency in Sandton. BEE certificates, compliance verification, gap analysis & training for SA businesses.">
+<meta name="keywords" content="B-BBEE verification agency, BEE verification agency South Africa, BEE certificate, B-BBEE compliance services, BEE rating agency Johannesburg, BEE verification Sandton, SANAS accredited BEE agency, BEE audit services, BEE consulting South Africa">
+<meta property="og:title" content="B-BBEE Verification Agency in South Africa | Akani BEE Ratings">
+<meta property="og:description" content="SANAS-accredited B-BBEE verification agency providing BEE certificates, compliance verification, and expert BEE consulting in Johannesburg, South Africa.">
+<meta property="og:url" content="https://akanibee.co.za/">
 </head>
 <body class="bg-white text-secondary antialiased">
 
@@ -88,10 +91,10 @@
       <!-- Left: Content -->
       <div>
         <span class="text-primary text-sm font-semibold tracking-wider uppercase">About Us</span>
-        <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-secondary">Together WE Build</h2>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-secondary">Trusted B-BBEE Verification Agency in South Africa</h2>
         <div class="mt-2 w-16 h-1 bg-primary rounded-full"></div>
-        <p class="mt-6 text-lg font-medium text-secondary/80">AKANI BEE Ratings (Pty) Ltd is a 51% Black owned B-BBEE verification agency.</p>
-        <p class="mt-4 text-muted-foreground leading-relaxed">We are rapidly evolving through adapting to relentless changing business challenges. We conduct B-BBEE business in accordance with regulatory requirements. Our values are rooted in quality service delivery, value addition, and time consciousness whilst retaining impartiality and integrity in the end-to-end process. As a Level 2 Rating agency, our experienced and professional team guarantees seamless verification processes with constant feedback to our clients to keep them in the loop on the project.</p>
+        <p class="mt-6 text-lg font-medium text-secondary/80">AKANI BEE Ratings (Pty) Ltd is a 51% Black-owned, Level 2 B-BBEE verification agency based in Sandton, Johannesburg.</p>
+        <p class="mt-4 text-muted-foreground leading-relaxed">We provide professional B-BBEE verification services, BEE certificates, and compliance support for businesses of all sizes across South Africa. Our values are rooted in quality service delivery, value addition, and time consciousness whilst retaining impartiality and integrity in the end-to-end verification process. As a SANAS-accredited rating agency, our experienced team guarantees seamless BEE verification with constant feedback to keep you informed at every stage.</p>
         <a href="company-overview.php" class="inline-flex items-center gap-2 mt-8 px-6 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-all duration-200 shadow-sm hover:shadow-md">
           Read More <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
@@ -144,7 +147,7 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center max-w-2xl mx-auto mb-14">
       <span class="text-primary text-sm font-semibold tracking-wider uppercase">Our Services</span>
-      <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-secondary">What We Do</h2>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-secondary">B-BBEE Compliance Services We Offer</h2>
       <div class="mt-3 w-16 h-1 bg-primary rounded-full mx-auto"></div>
     </div>
 
@@ -157,7 +160,7 @@
             <i data-lucide="shield-check" class="w-7 h-7 text-primary group-hover:text-white transition-colors"></i>
           </div>
           <h3 class="text-xl font-bold text-secondary">B-BBEE Verifications</h3>
-          <p class="mt-3 text-muted-foreground leading-relaxed">Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+          <p class="mt-3 text-muted-foreground leading-relaxed">Comprehensive BEE verification for EME, QSE, and large enterprises. We issue B-BBEE certificates that are recognised across all sectors and government procurement processes.</p>
           <a href="what-we-offer.php" class="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-primary hover:text-primary-hover transition-colors">
             Learn more <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
@@ -225,7 +228,7 @@
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-2xl mx-auto lg:mx-0">
       <span class="text-primary text-sm font-semibold tracking-wider uppercase">Let's Connect</span>
-      <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-white">Get In Touch</h2>
+      <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-white">Request a B-BBEE Verification Quote</h2>
       <div class="mt-2 w-16 h-1 bg-primary rounded-full"></div>
 
       <!-- CossUI Form Card -->

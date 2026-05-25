@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
 <?php include 'includes/head.php'; ?>
-<title>Contact Us - Together We Build</title>
-<meta name="description" content="Get in touch with Akani BEE Ratings for B-BBEE verification inquiries, guidance, or any questions.">
-<meta name="keywords" content="Akani contact, B-BBEE verification contact, BEE Training contact">
+<title>Contact Akani BEE Ratings | B-BBEE Verification Agency Sandton</title>
+<meta name="description" content="Contact Akani BEE Ratings in Sandton for B-BBEE verification and BEE certificates. Call +27 83 459 1583 or email info@akanibee.co.za.">
+<meta name="keywords" content="contact BEE verification agency, BEE verification agency Sandton, BEE agency near me, B-BBEE verification Sunninghill, BEE consultants Gauteng">
+<meta property="og:title" content="Contact Akani BEE Ratings | B-BBEE Verification Agency Sandton">
+<meta property="og:description" content="Get in touch with our B-BBEE verification team in Sunninghill, Sandton. Professional support for BEE certificates and compliance.">
+<meta property="og:url" content="https://akanibee.co.za/contact.php">
 </head>
 <body class="bg-white text-secondary antialiased">
 

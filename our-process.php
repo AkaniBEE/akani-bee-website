@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
 <?php include 'includes/head.php'; ?>
-<title>Our Process - Together We Build</title>
-<meta name="description" content="Discover our structured B-BBEE verification process at Akani BEE Ratings, from request to certification.">
-<meta name="keywords" content="B-BBEE verification process, BEE certification steps, verification procedure">
+<title>How B-BBEE Verification Works | Our Process | Akani BEE Ratings</title>
+<meta name="description" content="Our B-BBEE verification process: from initial request and evidence submission to desk review, site visit, and certificate issuance.">
+<meta name="keywords" content="B-BBEE verification process, how BEE verification works, BEE certification steps, BEE audit process, how to get a B-BBEE certificate, how long does BEE verification take">
+<meta property="og:title" content="How B-BBEE Verification Works | Akani BEE Ratings">
+<meta property="og:description" content="Our step-by-step B-BBEE verification process — from request to certificate issuance. Transparent, efficient, and professional.">
+<meta property="og:url" content="https://akanibee.co.za/our-process.php">
 </head>
 <body class="bg-white text-secondary antialiased">
 

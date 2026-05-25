@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
 <?php include 'includes/head.php'; ?>
-<title>Appeals and Complaints Statement - Together We Build</title>
-<meta name="description" content="Akani BEE Ratings appeals and complaints statement - our procedure for handling disputes.">
+<title>Appeals & Complaints Procedure | Akani BEE Ratings</title>
+<meta name="description" content="Akani BEE Ratings' appeals and complaints procedure for B-BBEE verification decisions. Fair, transparent dispute resolution.">
+<meta property="og:title" content="Appeals & Complaints Procedure | Akani BEE Ratings">
+<meta property="og:description" content="Our transparent process for handling appeals and complaints related to B-BBEE verification decisions.">
+<meta property="og:url" content="https://akanibee.co.za/appeals-and-complaints-statement.php">
 </head>
 <body class="bg-white text-secondary antialiased">
 

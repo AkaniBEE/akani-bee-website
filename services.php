@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
 <?php include 'includes/head.php'; ?>
-<title>Our Services - Together We Build</title>
-<meta name="description" content="Explore Akani BEE Ratings comprehensive B-BBEE verification services and BEE training.">
-<meta name="keywords" content="B-BBEE Verifications, Evidence Collation, BEE Training, BEE Insights, Gap Analysis">
+<title>BEE Verification & Compliance Services | Akani BEE Ratings</title>
+<meta name="description" content="Professional B-BBEE verification, compliance, evidence collation, gap analysis & enterprise development services across South Africa.">
+<meta name="keywords" content="BEE verification services South Africa, B-BBEE compliance services, BEE consulting, evidence collation BEE, enterprise and supplier development BEE, affordable BEE verification services">
+<meta property="og:title" content="BEE Verification & Compliance Services | Akani BEE Ratings">
+<meta property="og:description" content="Full-spectrum B-BBEE services including verification, compliance consulting, evidence collation, and BEE training across South Africa.">
+<meta property="og:url" content="https://akanibee.co.za/services.php">
 </head>
 <body class="bg-white text-secondary antialiased">
 

@@ -2,8 +2,11 @@
 <html lang="en">
 <head>
 <?php include 'includes/head.php'; ?>
-<title>Impartiality Statement - Together We Build</title>
-<meta name="description" content="Akani BEE Ratings impartiality statement - our commitment to unbiased B-BBEE verification.">
+<title>Impartiality Statement | Akani BEE Ratings</title>
+<meta name="description" content="Akani BEE Ratings' commitment to unbiased, independent B-BBEE verification in accordance with SANAS requirements.">
+<meta property="og:title" content="Impartiality Statement | Akani BEE Ratings">
+<meta property="og:description" content="Our commitment to unbiased and independent B-BBEE verification, free from conflicts of interest.">
+<meta property="og:url" content="https://akanibee.co.za/impartiality-statement.php">
 </head>
 <body class="bg-white text-secondary antialiased">
 

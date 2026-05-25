@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
 <?php include 'includes/head.php'; ?>
-<title>B-BBEE Act and Amendments - Together We Build</title>
-<meta name="description" content="Download the B-BBEE Act, amendments, and related gazette documents.">
+<title>B-BBEE Act & Amendments | Downloads | Akani BEE Ratings</title>
+<meta name="description" content="Download the B-BBEE Act, gazette amendments, BEE Commissioner Practice Guide, and verification manual for compliance.">
+<meta name="keywords" content="B-BBEE Act, BEE Act South Africa, B-BBEE amendments, BEE legislation, BEE Commissioner Practice Guide, BEE verification manual">
+<meta property="og:title" content="B-BBEE Act & Amendments | Legislation Downloads">
+<meta property="og:description" content="Access the B-BBEE Act, amendments, and essential compliance legislation documents for South African businesses.">
+<meta property="og:url" content="https://akanibee.co.za/bee-act-and-amendments.php">
 </head>
 <body class="bg-white text-secondary antialiased">
 

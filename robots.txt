@@ -1,0 +1,20 @@
+# Akani BEE Ratings - robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://akanibee.co.za/sitemap.xml
+
+# Disallow backend scripts
+Disallow: /sendmail.php
+Disallow: /sendemailcontact.php
+Disallow: /contact-me.php
+Disallow: /download.php
+Disallow: /downloads.php
+Disallow: /includes/
+Disallow: /Old_Site/
+Disallow: /New/
+Disallow: /*.zip$
+
+# Crawl-delay for politeness
+Crawl-delay: 1

@@ -2,8 +2,12 @@
 <html lang="en">
 <head>
 <?php include 'includes/head.php'; ?>
-<title>Explanatory Notes - Together We Build</title>
-<meta name="description" content="Download B-BBEE explanatory notes and guidelines.">
+<title>B-BBEE Explanatory Notes & Guidelines | Akani BEE Ratings</title>
+<meta name="description" content="Download B-BBEE explanatory notes and guidelines to help your business understand and implement the Codes of Good Practice.">
+<meta name="keywords" content="B-BBEE explanatory notes, BEE guidelines, BEE compliance framework, understanding BEE codes, BEE compliance support">
+<meta property="og:title" content="B-BBEE Explanatory Notes & Guidelines">
+<meta property="og:description" content="Access explanatory notes and frameworks for understanding B-BBEE compliance requirements.">
+<meta property="og:url" content="https://akanibee.co.za/explanatory-notes.php">
 </head>
 <body class="bg-white text-secondary antialiased">
 

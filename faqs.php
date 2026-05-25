@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
 <?php include 'includes/head.php'; ?>
-<title>FAQ - Together We Build</title>
-<meta name="description" content="Frequently asked questions about B-BBEE, verification, compliance, and Akani BEE Ratings services.">
-<meta name="keywords" content="B-BBEE FAQ, BEE questions, B-BBEE compliance, BEE verification FAQ">
+<title>B-BBEE FAQs & BEE Verification Questions | Akani BEE Ratings</title>
+<meta name="description" content="Answers to common B-BBEE questions about verification, BEE certificates, compliance, EME/QSE categories, and scorecard elements.">
+<meta name="keywords" content="B-BBEE FAQ, how to get a B-BBEE certificate, what documents needed BEE verification, BEE verification for small businesses, improve your BEE scorecard, B-BBEE compliance questions">
+<meta property="og:title" content="B-BBEE FAQs | Common BEE Verification Questions">
+<meta property="og:description" content="Answers to the most common questions about B-BBEE verification, certificates, compliance, and scorecard elements.">
+<meta property="og:url" content="https://akanibee.co.za/faqs.php">
 </head>
 <body class="bg-white text-secondary antialiased">
 
@@ -56,6 +59,26 @@ include 'includes/page-hero.php';
 
     $all_faqs = array_merge($faqs_left, $faqs_right);
     ?>
+
+    <!-- FAQ Schema (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        <?php foreach ($all_faqs as $i => $faq): ?>
+        {
+          "@type": "Question",
+          "name": <?= json_encode($faq['q']) ?>,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": <?= json_encode($faq['a']) ?>
+          }
+        }<?= $i < count($all_faqs) - 1 ? ',' : '' ?>
+        <?php endforeach; ?>
+      ]
+    }
+    </script>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6" x-data="{ active: 0 }">
       <!-- Left Column -->

@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
 <?php include 'includes/head.php'; ?>
-<title>Company Overview - Together We Build</title>
-<meta name="description" content="Akani BEE Ratings, a 51% Black owned B-BBEE verification agency, specializes in comprehensive B-BBEE Verifications, Evidence Collation, BEE Training and Insights, and Gap Analysis.">
-<meta name="keywords" content="B-BBEE Verifications, Evidence Collation, BEE Training, BEE Insights, Gap Analysis, B-BBEE Certification, B-BBEE Renewals">
+<title>About Akani BEE Ratings | B-BBEE Verification Agency Johannesburg</title>
+<meta name="description" content="51% Black-owned, Level 2 B-BBEE verification agency in Sandton. Professional BEE verification and compliance services across South Africa.">
+<meta name="keywords" content="about Akani BEE Ratings, B-BBEE verification agency Johannesburg, BEE rating agency South Africa, Level 2 BEE agency, Black owned BEE agency">
+<meta property="og:title" content="About Akani BEE Ratings | B-BBEE Verification Agency Johannesburg">
+<meta property="og:description" content="51% Black-owned, Level 2 B-BBEE verification agency in Sandton providing professional verification and compliance services across South Africa.">
+<meta property="og:url" content="https://akanibee.co.za/company-overview.php">
 </head>
 <body class="bg-white text-secondary antialiased">
 

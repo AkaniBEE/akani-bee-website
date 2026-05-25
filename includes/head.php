@@ -1,14 +1,117 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="author" content="Akani BEE Ratings">
-<meta name="robots" content="index, follow">
+<meta name="author" content="Akani BEE Ratings (Pty) Ltd">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="geo.region" content="ZA-GT">
+<meta name="geo.placename" content="Sandton, Johannesburg">
+<meta name="geo.position" content="-26.0367;28.0611">
+<meta name="ICBM" content="-26.0367, 28.0611">
+<?php
+  $canonical_path = basename($_SERVER['SCRIPT_NAME'] ?? 'index.php');
+  $canonical_suffix = ($canonical_path === 'index.php') ? '' : $canonical_path;
+?>
+<link rel="canonical" href="https://akanibee.co.za/<?= htmlspecialchars($canonical_suffix, ENT_QUOTES, 'UTF-8') ?>">
+<link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
+<link rel="dns-prefetch" href="https://unpkg.com">
+<link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 <link rel="manifest" href="site.webmanifest">
+<!-- Open Graph -->
+<meta property="og:site_name" content="Akani BEE Ratings">
+<meta property="og:locale" content="en_ZA">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://akanibee.co.za/images/logo.png">
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="@AkaniBEE">
+<!-- Organization Schema (site-wide) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "LocalBusiness"],
+  "@id": "https://akanibee.co.za/#organization",
+  "name": "Akani BEE Ratings (Pty) Ltd",
+  "alternateName": "Akani BEE Ratings",
+  "url": "https://akanibee.co.za",
+  "logo": "https://akanibee.co.za/images/logo.png",
+  "image": "https://akanibee.co.za/images/logo.png",
+  "description": "SANAS-accredited B-BBEE verification agency in Sandton, Johannesburg providing BEE certificates, compliance services, evidence collation, gap analysis, and BEE training across South Africa.",
+  "telephone": ["+27834591583", "+27786204360"],
+  "email": "info@akanibee.co.za",
+  "foundingDate": "2020",
+  "areaServed": {
+    "@type": "Country",
+    "name": "South Africa"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Suite 002, Ground Floor, Block A, 11 Naivasha Street",
+    "addressLocality": "Sunninghill",
+    "addressRegion": "Gauteng",
+    "postalCode": "2191",
+    "addressCountry": "ZA"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": -26.0367,
+    "longitude": 28.0611
+  },
+  "sameAs": [
+    "https://twitter.com/AkaniBEE",
+    "https://www.linkedin.com/company/akani-bee-ratings"
+  ],
+  "priceRange": "$$",
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+    "opens": "08:00",
+    "closes": "17:00"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "B-BBEE Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "B-BBEE Verification",
+          "description": "Comprehensive B-BBEE verification and certification services for EME, QSE, and large enterprises."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Evidence Collation",
+          "description": "Expert guidance in compiling and organising B-BBEE scorecard evidence for verification audits."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "BEE Gap Analysis",
+          "description": "Strategic gap analysis to identify improvement areas for your B-BBEE scorecard."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "BEE Training and Insights",
+          "description": "Training sessions and insights to help businesses understand B-BBEE codes and compliance."
+        }
+      }
+    ]
+  }
+}
+</script>
 <!-- Tailwind CSS CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
 <script>

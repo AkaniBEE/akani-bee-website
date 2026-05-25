@@ -217,9 +217,11 @@
 </section>
 
 <!-- Contact Form Section -->
-<section class="relative py-20 overflow-hidden">
+<section class="relative pt-24 pb-28 overflow-hidden">
   <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/image-1.png')"></div>
-  <div class="absolute inset-0 bg-secondary/90"></div>
+  <div class="absolute inset-0 bg-secondary/75"></div>
+  <!-- Bottom fade into footer -->
+  <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-secondary-dark"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-2xl mx-auto lg:mx-0">
       <span class="text-primary text-sm font-semibold tracking-wider uppercase">Let's Connect</span>
@@ -227,7 +229,7 @@
       <div class="mt-2 w-16 h-1 bg-primary rounded-full"></div>
 
       <!-- CossUI Form Card -->
-      <div class="mt-10 rounded-2xl bg-white/10 glass border border-white/10 p-8 lg:p-10">
+      <div class="mt-10 rounded-2xl bg-white/[0.12] glass border border-white/15 p-8 lg:p-10 shadow-2xl shadow-black/20">
         <form method="post" action="sendmail.php" class="space-y-6">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <!-- CossUI Field: Name -->

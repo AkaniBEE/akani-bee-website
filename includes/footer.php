@@ -1,7 +1,14 @@
 <!-- Footer -->
-<footer class="bg-secondary text-white">
+<footer class="relative bg-secondary-dark text-white">
+  <!-- Top Divider / Glow Line -->
+  <div class="absolute top-0 left-0 right-0">
+    <div class="h-px bg-gradient-to-r from-transparent via-primary/80 to-transparent"></div>
+    <div class="h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent mt-px"></div>
+    <div class="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent mt-px"></div>
+    <div class="h-6 bg-gradient-to-b from-primary/8 to-transparent"></div>
+  </div>
   <!-- Main Footer -->
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
 
       <!-- About Column -->

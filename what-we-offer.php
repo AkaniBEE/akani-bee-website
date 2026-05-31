@@ -67,7 +67,7 @@ include 'includes/page-hero.php';
 <!-- CTA Section -->
 <section class="relative py-20 overflow-hidden">
   <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/image-4.png')"></div>
-  <div class="absolute inset-0 bg-secondary/90"></div>
+  <div class="absolute inset-0 bg-black/30"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 class="text-3xl sm:text-4xl font-bold text-white">Ready to Get Started?</h2>
     <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Contact us today to discuss your B-BBEE verification needs and how we can help your business grow.</p>

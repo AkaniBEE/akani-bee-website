@@ -27,10 +27,10 @@ if (isset($breadcrumbs) && !empty($breadcrumbs)):
 ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT) ?>
 </script>
 <?php endif; ?>
-<section class="relative overflow-hidden bg-secondary">
+<section class="relative overflow-hidden">
   <!-- Background Image -->
-  <div class="absolute inset-0 bg-cover bg-center opacity-30" style="background-image: url('<?= htmlspecialchars($hero_bg, ENT_QUOTES, 'UTF-8') ?>')"></div>
-  <div class="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-secondary/70"></div>
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('<?= htmlspecialchars($hero_bg, ENT_QUOTES, 'UTF-8') ?>')"></div>
+  <div class="absolute inset-0 bg-black/30"></div>
 
   <!-- Content -->
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">

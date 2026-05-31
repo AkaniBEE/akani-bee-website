@@ -73,8 +73,8 @@
 
       <!-- Newsletter - CossUI Form -->
       <div>
-        <h3 class="text-lg font-semibold mb-5">Stay Connected</h3>
-        <p class="text-sm text-gray-400 mb-5">Leave us your email address and we will contact you.</p>
+        <h3 class="text-lg font-semibold mb-5">Get a Free Gap Analysis</h3>
+        <p class="text-sm text-gray-400 mb-5">Drop your email and we'll send you a free B-BBEE gap analysis overview for your business.</p>
         <form method="post" action="contact-me.php">
           <div class="coss-field">
             <div class="coss-input-wrapper coss-input-wrapper--dark" style="padding-right: 2.75rem;">
@@ -84,7 +84,7 @@
                 <i data-lucide="send" class="w-4 h-4 text-white"></i>
               </button>
             </div>
-            <p class="coss-field-description text-gray-500">We'll reach out to you shortly.</p>
+            <p class="coss-field-description text-gray-500">No spam. We'll reach out with your free report.</p>
           </div>
         </form>
       </div>

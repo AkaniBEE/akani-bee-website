@@ -72,7 +72,7 @@ include 'includes/page-hero.php';
     <h2 class="text-3xl sm:text-4xl font-bold text-white">Ready to Get Started?</h2>
     <p class="mt-4 text-lg text-gray-300 max-w-2xl mx-auto">Contact us today to discuss your B-BBEE verification needs and how we can help your business grow.</p>
     <a href="contact.php" class="inline-flex items-center gap-2 mt-8 px-8 py-4 bg-primary text-white font-semibold rounded-lg hover:bg-primary-hover transition-all duration-200 shadow-lg hover:shadow-xl text-lg">
-      Build With AKANI <i data-lucide="arrow-right" class="w-5 h-5"></i>
+      Get a Free Quote <i data-lucide="arrow-right" class="w-5 h-5"></i>
     </a>
   </div>
 </section>

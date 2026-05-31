@@ -29,9 +29,9 @@ include 'includes/page-hero.php';
       <!-- Left: Overview -->
       <div>
         <span class="text-primary text-sm font-semibold tracking-wider uppercase">Overview</span>
-        <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-secondary">AKANI BEE Ratings</h2>
+        <h2 class="mt-3 text-3xl sm:text-4xl font-bold text-secondary">Akani BEE Ratings</h2>
         <div class="mt-2 w-16 h-1 bg-primary rounded-full"></div>
-        <p class="mt-6 text-lg font-medium text-secondary/80">AKANI BEE Ratings (Pty) Ltd is a 51% Black owned B-BBEE verification agency.</p>
+        <p class="mt-6 text-lg font-medium text-secondary/80">Akani BEE Ratings (Pty) Ltd is a 51% Black owned B-BBEE verification agency.</p>
         <p class="mt-4 text-muted-foreground leading-relaxed">We are rapidly evolving through adapting to relentless changing business challenges. We conduct B-BEE business in accordance with regulatory requirements. Our values are rooted in quality service delivery, value addition, and time consciousness whilst retaining impartiality and integrity in the end-to-end process. As a Level 2 Rating agency, our experienced and professional team guarantees seamless verification processes with constant feedback to our clients to keep them in the loop on the project.</p>
       </div>
 

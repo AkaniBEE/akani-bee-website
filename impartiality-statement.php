@@ -39,7 +39,7 @@ include 'includes/page-hero.php';
         </div>
       </div>
       <p class="text-muted-foreground leading-relaxed text-justify">
-        AKANI BEE is committed to upholding the principles of impartiality and independence as outlined in SANAS R47-03. We declare that our verification activities are conducted with complete objectivity, free from any undue commercial, financial, or other pressures. We maintain a strict policy to identify, manage, and mitigate any potential conflicts of interest that may arise during our verification processes. Our personnel are trained to adhere to the highest ethical standards and are prohibited from engaging in activities that could compromise impartiality. AKANI BEE Ratings strives to ensure that all our clients receive fair and unbiased treatment throughout the verification process.
+        Akani BEE is committed to upholding the principles of impartiality and independence as outlined in SANAS R47-03. We declare that our verification activities are conducted with complete objectivity, free from any undue commercial, financial, or other pressures. We maintain a strict policy to identify, manage, and mitigate any potential conflicts of interest that may arise during our verification processes. Our personnel are trained to adhere to the highest ethical standards and are prohibited from engaging in activities that could compromise impartiality. Akani BEE Ratings strives to ensure that all our clients receive fair and unbiased treatment throughout the verification process.
       </p>
     </div>
 

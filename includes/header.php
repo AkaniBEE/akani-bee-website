@@ -55,13 +55,19 @@ $cp = $current_page !== basename($_SERVER['PHP_SELF']) ? $current_page : $curren
       <nav class="hidden lg:flex items-center gap-1">
         <a href="index.php" class="px-3 py-2 rounded-lg text-sm font-medium transition-colors <?= isActive('index', $cp) ?>">Home</a>
 
-        <!-- About Dropdown -->
+        <!-- About Dropdown (includes Statements) -->
         <div x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false" @keydown.escape.prevent="open = false" @focusout="if (!$el.contains($event.relatedTarget)) open = false" class="relative">
-          <button @click="open = !open" @keydown.enter.prevent="open = !open" @keydown.space.prevent="open = !open" aria-haspopup="true" :aria-expanded="open" class="px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 <?= isDropdownActive(['company-overview'], $cp) ?>">
+          <button @click="open = !open" @keydown.enter.prevent="open = !open" @keydown.space.prevent="open = !open" aria-haspopup="true" :aria-expanded="open" class="px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 <?= isDropdownActive(['company-overview','impartiality-statement','appeals-and-complaints-statement','appeals-procedure','popia-statement'], $cp) ?>">
             About <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform" :class="open && 'rotate-180'"></i>
           </button>
-          <div x-show="open" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute left-0 mt-1 w-56 rounded-xl border border-border bg-white shadow-xl p-1.5">
+          <div x-show="open" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-1" class="absolute left-0 mt-1 w-64 rounded-xl border border-border bg-white shadow-xl p-1.5">
             <a href="company-overview.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">Company Overview</a>
+            <div class="my-1 border-t border-border"></div>
+            <p class="px-3 py-1 text-xs text-muted-foreground font-medium uppercase tracking-wider">Statements</p>
+            <a href="impartiality-statement.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">Impartiality Statement</a>
+            <a href="appeals-and-complaints-statement.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">Appeals &amp; Complaints</a>
+            <a href="appeals-procedure.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">Appeals Procedure</a>
+            <a href="popia-statement.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">POPIA Statement</a>
           </div>
         </div>
 
@@ -77,25 +83,15 @@ $cp = $current_page !== basename($_SERVER['PHP_SELF']) ? $current_page : $curren
           </div>
         </div>
 
-        <!-- Statements Dropdown -->
+        <!-- Resources Dropdown (BEE Information + FAQs) -->
         <div x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false" @keydown.escape.prevent="open = false" @focusout="if (!$el.contains($event.relatedTarget)) open = false" class="relative">
-          <button @click="open = !open" @keydown.enter.prevent="open = !open" @keydown.space.prevent="open = !open" aria-haspopup="true" :aria-expanded="open" class="px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 <?= isDropdownActive(['impartiality-statement','appeals-and-complaints-statement','appeals-procedure','popia-statement'], $cp) ?>">
-            Statements <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform" :class="open && 'rotate-180'"></i>
+          <button @click="open = !open" @keydown.enter.prevent="open = !open" @keydown.space.prevent="open = !open" aria-haspopup="true" :aria-expanded="open" class="px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 <?= isDropdownActive(['bee-codes','explanatory-notes','bee-act-and-amendments','affidavits','faqs'], $cp) ?>">
+            Resources <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform" :class="open && 'rotate-180'"></i>
           </button>
           <div x-show="open" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" class="absolute left-0 mt-1 w-64 rounded-xl border border-border bg-white shadow-xl p-1.5">
-            <a href="impartiality-statement.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">Impartiality Statement</a>
-            <a href="appeals-and-complaints-statement.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">Appeals &amp; Complaints</a>
-            <a href="appeals-procedure.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">Appeals Procedure</a>
-            <a href="popia-statement.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">POPIA Statement</a>
-          </div>
-        </div>
-
-        <!-- BEE Information Dropdown -->
-        <div x-data="{ open: false }" @mouseenter="open = true" @mouseleave="open = false" @keydown.escape.prevent="open = false" @focusout="if (!$el.contains($event.relatedTarget)) open = false" class="relative">
-          <button @click="open = !open" @keydown.enter.prevent="open = !open" @keydown.space.prevent="open = !open" aria-haspopup="true" :aria-expanded="open" class="px-3 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 <?= isDropdownActive(['bee-codes','explanatory-notes','bee-act-and-amendments','affidavits'], $cp) ?>">
-            BEE Information <i data-lucide="chevron-down" class="w-3.5 h-3.5 transition-transform" :class="open && 'rotate-180'"></i>
-          </button>
-          <div x-show="open" x-cloak x-transition:enter="transition ease-out duration-200" x-transition:enter-start="opacity-0 translate-y-1" x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transition ease-in duration-150" class="absolute left-0 mt-1 w-64 rounded-xl border border-border bg-white shadow-xl p-1.5">
+            <a href="faqs.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">FAQs</a>
+            <div class="my-1 border-t border-border"></div>
+            <p class="px-3 py-1 text-xs text-muted-foreground font-medium uppercase tracking-wider">BEE Information</p>
             <a href="bee-codes.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">B-BBEE Codes</a>
             <a href="explanatory-notes.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">Explanatory Notes</a>
             <a href="bee-act-and-amendments.php" class="block px-3 py-2 rounded-lg text-sm hover:bg-muted transition-colors">B-BBEE Act &amp; Amendments</a>
@@ -103,14 +99,13 @@ $cp = $current_page !== basename($_SERVER['PHP_SELF']) ? $current_page : $curren
           </div>
         </div>
 
-        <a href="faqs.php" class="px-3 py-2 rounded-lg text-sm font-medium transition-colors <?= isActive('faqs', $cp) ?>">FAQs</a>
         <a href="contact.php" class="px-3 py-2 rounded-lg text-sm font-medium transition-colors <?= isActive('contact', $cp) ?>">Contact</a>
       </nav>
 
       <!-- CTA Button + Mobile Toggle -->
       <div class="flex items-center gap-3">
         <a href="contact.php" class="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg shadow-sm hover:bg-primary-hover transition-all duration-200 hover:shadow-md">
-          Build With AKANI
+          Get a Free Quote
         </a>
         <!-- Mobile Menu Button -->
         <button @click="mobileOpen = !mobileOpen" class="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors" aria-label="Toggle menu">
@@ -132,6 +127,11 @@ $cp = $current_page !== basename($_SERVER['PHP_SELF']) ? $current_page : $curren
         </button>
         <div x-show="open" x-cloak class="pl-4 space-y-1 mt-1">
           <a href="company-overview.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">Company Overview</a>
+          <p class="px-4 pt-2 pb-1 text-xs text-muted-foreground font-medium uppercase tracking-wider">Statements</p>
+          <a href="impartiality-statement.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">Impartiality Statement</a>
+          <a href="appeals-and-complaints-statement.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">Appeals &amp; Complaints</a>
+          <a href="appeals-procedure.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">Appeals Procedure</a>
+          <a href="popia-statement.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">POPIA Statement</a>
         </div>
       </div>
 
@@ -148,21 +148,11 @@ $cp = $current_page !== basename($_SERVER['PHP_SELF']) ? $current_page : $curren
 
       <div x-data="{ open: false }">
         <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-muted transition-colors">
-          Statements <i data-lucide="chevron-down" class="w-4 h-4 transition-transform" :class="open && 'rotate-180'"></i>
+          Resources <i data-lucide="chevron-down" class="w-4 h-4 transition-transform" :class="open && 'rotate-180'"></i>
         </button>
         <div x-show="open" x-cloak class="pl-4 space-y-1 mt-1">
-          <a href="impartiality-statement.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">Impartiality Statement</a>
-          <a href="appeals-and-complaints-statement.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">Appeals &amp; Complaints</a>
-          <a href="appeals-procedure.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">Appeals Procedure</a>
-          <a href="popia-statement.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">POPIA Statement</a>
-        </div>
-      </div>
-
-      <div x-data="{ open: false }">
-        <button @click="open = !open" class="w-full flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-muted transition-colors">
-          BEE Information <i data-lucide="chevron-down" class="w-4 h-4 transition-transform" :class="open && 'rotate-180'"></i>
-        </button>
-        <div x-show="open" x-cloak class="pl-4 space-y-1 mt-1">
+          <a href="faqs.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">FAQs</a>
+          <p class="px-4 pt-2 pb-1 text-xs text-muted-foreground font-medium uppercase tracking-wider">BEE Information</p>
           <a href="bee-codes.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">B-BBEE Codes</a>
           <a href="explanatory-notes.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">Explanatory Notes</a>
           <a href="bee-act-and-amendments.php" class="block px-4 py-2 rounded-lg text-sm text-muted-foreground hover:bg-muted transition-colors">B-BBEE Act &amp; Amendments</a>
@@ -170,12 +160,11 @@ $cp = $current_page !== basename($_SERVER['PHP_SELF']) ? $current_page : $curren
         </div>
       </div>
 
-      <a href="faqs.php" class="block px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-muted transition-colors">FAQs</a>
       <a href="contact.php" class="block px-4 py-2.5 rounded-lg text-sm font-medium hover:bg-muted transition-colors">Contact</a>
 
       <div class="pt-3 border-t border-border mt-3">
         <a href="contact.php" class="block w-full text-center px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-lg hover:bg-primary-hover transition-colors">
-          Build With AKANI
+          Get a Free Quote
         </a>
       </div>
     </div>

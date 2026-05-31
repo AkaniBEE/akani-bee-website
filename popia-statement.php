@@ -40,7 +40,7 @@ include 'includes/page-hero.php';
         </div>
       </div>
       <p class="text-muted-foreground leading-relaxed mb-6 text-justify">
-        At AKANI BEE Ratings, we are dedicated to safeguarding the personal information of our clients, employees, suppliers, and other stakeholders. This Privacy and Protection of Personal Information Act (POPIA) Statement outlines how we collect, use, store, and protect personal information in compliance with the requirements of the Protection of Personal Information Act, 2013 (Act No. 4 of 2013) and the SANAS R47-03 for B-BBEE Verification Agencies.
+        At Akani BEE Ratings, we are dedicated to safeguarding the personal information of our clients, employees, suppliers, and other stakeholders. This Privacy and Protection of Personal Information Act (POPIA) Statement outlines how we collect, use, store, and protect personal information in compliance with the requirements of the Protection of Personal Information Act, 2013 (Act No. 4 of 2013) and the SANAS R47-03 for B-BBEE Verification Agencies.
       </p>
 
       <div class="space-y-5">

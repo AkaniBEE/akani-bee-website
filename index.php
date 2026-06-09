@@ -15,9 +15,9 @@
 
 <!-- Hero Slider Section -->
 <section x-data="{ current: 0, paused: false, slides: [
-  { image: 'images/main-slider/2.png', title: 'Achieve Your Ideal', highlight: 'B-BBEE Level', text: 'Whether you\'re an EME, QSE, or large enterprise, our SANAS-accredited team helps you reach the B-BBEE level your business deserves. 51% Black-owned and trusted across South Africa.' },
-  { image: 'images/main-slider/3.png', title: 'Maximise Your Scorecard', highlight: 'With Expert Guidance', text: 'From evidence collation to full verification, we simplify the process so you can focus on growing your business. Let us handle the compliance.' },
-  { image: 'images/main-slider/1.png', title: 'Close the Gap', highlight: 'Grow Your Score', text: 'Our gap analysis pinpoints exactly where to improve on Enterprise Development, Supplier Development, and Skills. A clear roadmap to a better B-BBEE rating.' }
+  { image: 'images/main-slider/2.jpg', title: 'Achieve Your Ideal', highlight: 'B-BBEE Level', text: 'Whether you\'re an EME, QSE, or large enterprise, our SANAS-accredited team helps you reach the B-BBEE level your business deserves. 51% Black-owned and trusted across South Africa.' },
+  { image: 'images/main-slider/3.jpg', title: 'Maximise Your Scorecard', highlight: 'With Expert Guidance', text: 'From evidence collation to full verification, we simplify the process so you can focus on growing your business. Let us handle the compliance.' },
+  { image: 'images/main-slider/1.jpg', title: 'Close the Gap', highlight: 'Grow Your Score', text: 'Our gap analysis pinpoints exactly where to improve on Enterprise Development, Supplier Development, and Skills. A clear roadmap to a better B-BBEE rating.' }
 ] }" x-init="
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     setInterval(() => { if (!paused) current = (current + 1) % slides.length }, 7000)
@@ -29,7 +29,7 @@
     <div class="absolute inset-0 transition-all duration-1000 ease-in-out"
          :class="current === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105'">
       <div class="absolute inset-0 bg-cover bg-center" :style="'background-image: url(' + slide.image + ')'"></div>
-      <div class="absolute inset-0 bg-black/30"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/60 to-secondary/20"></div>
     </div>
   </template>
 

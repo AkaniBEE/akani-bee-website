@@ -15,9 +15,9 @@
 
 <!-- Hero Slider Section -->
 <section x-data="{ current: 0, paused: false, slides: [
-  { image: 'images/main-slider/2.png', title: 'Achieve Your Ideal', highlight: 'B-BBEE Level', text: 'Whether you\'re an EME, QSE, or large enterprise, our SANAS-accredited team helps you reach the B-BBEE level your business deserves. 51% Black-owned and trusted across South Africa.' },
-  { image: 'images/main-slider/3.png', title: 'Maximise Your Scorecard', highlight: 'With Expert Guidance', text: 'From evidence collation to full verification, we simplify the process so you can focus on growing your business. Let us handle the compliance.' },
-  { image: 'images/main-slider/1.png', title: 'Close the Gap', highlight: 'Grow Your Score', text: 'Our gap analysis pinpoints exactly where to improve on Enterprise Development, Supplier Development, and Skills. A clear roadmap to a better B-BBEE rating.' }
+  { image: 'images/main-slider/2.jpg', title: 'Achieve Your Ideal', highlight: 'B-BBEE Level', text: 'Whether you\'re an EME, QSE, or large enterprise, our SANAS-accredited team helps you reach the B-BBEE level your business deserves. 51% Black-owned and trusted across South Africa.' },
+  { image: 'images/main-slider/3.jpg', title: 'Maximise Your Scorecard', highlight: 'With Expert Guidance', text: 'From evidence collation to full verification, we simplify the process so you can focus on growing your business. Let us handle the compliance.' },
+  { image: 'images/main-slider/1.jpg', title: 'Close the Gap', highlight: 'Grow Your Score', text: 'Our gap analysis pinpoints exactly where to improve on Enterprise Development, Supplier Development, and Skills. A clear roadmap to a better B-BBEE rating.' }
 ] }" x-init="
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     setInterval(() => { if (!paused) current = (current + 1) % slides.length }, 7000)
@@ -29,7 +29,7 @@
     <div class="absolute inset-0 transition-all duration-1000 ease-in-out"
          :class="current === index ? 'opacity-100 scale-100' : 'opacity-0 scale-105'">
       <div class="absolute inset-0 bg-cover bg-center" :style="'background-image: url(' + slide.image + ')'"></div>
-      <div class="absolute inset-0 bg-black/30"></div>
+      <div class="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/60 to-secondary/20"></div>
     </div>
   </template>
 
@@ -232,7 +232,7 @@
       <div class="mt-2 w-16 h-1 bg-primary rounded-full"></div>
 
       <!-- CossUI Form Card -->
-      <div class="mt-10 rounded-2xl bg-white/[0.12] glass border border-white/15 p-8 lg:p-10 shadow-2xl shadow-black/20">
+      <div class="mt-10 rounded-2xl bg-secondary/90 border border-white/10 p-8 lg:p-10 shadow-2xl shadow-black/30">
         <form method="post" action="sendmail.php" class="space-y-6">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <!-- CossUI Field: Name -->
@@ -270,6 +270,20 @@
                   <option value="BEE Training and Insights">BEE Training and Insights</option>
                   <option value="Gap Analysis">Gap Analysis</option>
                 </select>
+              </div>
+            </div>
+            <!-- CossUI Field: Sector -->
+            <div class="coss-field">
+              <label for="sector" class="coss-label coss-label--light">Sector</label>
+              <div class="coss-input-wrapper coss-input-wrapper--dark">
+                <input type="text" id="sector" name="sector" placeholder="e.g. Construction, ICT, Finance" class="coss-input coss-input--dark">
+              </div>
+            </div>
+            <!-- CossUI Field: Turnover -->
+            <div class="coss-field">
+              <label for="turnover" class="coss-label coss-label--light">Annual Turnover (R)</label>
+              <div class="coss-input-wrapper coss-input-wrapper--dark">
+                <input type="number" id="turnover" name="turnover" placeholder="e.g. 5000000" min="0" class="coss-input coss-input--dark">
               </div>
             </div>
           </div>

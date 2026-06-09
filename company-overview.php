@@ -99,7 +99,7 @@ include 'includes/page-hero.php';
       <div class="mt-2 w-16 h-1 bg-primary rounded-full"></div>
 
       <!-- CossUI Form Card -->
-      <div class="mt-10 rounded-2xl bg-white/[0.12] glass border border-white/15 p-8 lg:p-10 shadow-2xl shadow-black/20">
+      <div class="mt-10 rounded-2xl bg-secondary/90 border border-white/10 p-8 lg:p-10 shadow-2xl shadow-black/30">
         <form method="post" action="sendmail.php" class="space-y-6">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <!-- CossUI Field: Name -->
@@ -134,6 +134,20 @@ include 'includes/page-hero.php';
                   <option value="BEE Training and Insights">BEE Training and Insights</option>
                   <option value="Gap Analysis">Gap Analysis</option>
                 </select>
+              </div>
+            </div>
+            <!-- CossUI Field: Sector -->
+            <div class="coss-field">
+              <label class="coss-label coss-label--light">Sector</label>
+              <div class="coss-input-wrapper coss-input-wrapper--dark">
+                <input type="text" name="sector" placeholder="e.g. Construction, ICT, Finance" class="coss-input coss-input--dark">
+              </div>
+            </div>
+            <!-- CossUI Field: Turnover -->
+            <div class="coss-field">
+              <label class="coss-label coss-label--light">Annual Turnover (R)</label>
+              <div class="coss-input-wrapper coss-input-wrapper--dark">
+                <input type="number" name="turnover" placeholder="e.g. 5000000" min="0" class="coss-input coss-input--dark">
               </div>
             </div>
           </div>

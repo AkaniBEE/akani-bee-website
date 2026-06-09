@@ -51,6 +51,22 @@ include 'includes/page-hero.php';
             </div>
             <p class="coss-field-description">We'll never share your email with anyone else.</p>
           </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <!-- CossUI Field: Sector -->
+            <div class="coss-field">
+              <label for="csector" class="coss-label">Sector</label>
+              <div class="coss-input-wrapper">
+                <input type="text" id="csector" name="sector" placeholder="e.g. Construction, ICT, Finance" class="coss-input">
+              </div>
+            </div>
+            <!-- CossUI Field: Turnover -->
+            <div class="coss-field">
+              <label for="cturnover" class="coss-label">Annual Turnover (R)</label>
+              <div class="coss-input-wrapper">
+                <input type="number" id="cturnover" name="turnover" placeholder="e.g. 5000000" min="0" class="coss-input">
+              </div>
+            </div>
+          </div>
           <!-- CossUI Field: Message -->
           <div class="coss-field">
             <label for="cmessage" class="coss-label">Message</label>

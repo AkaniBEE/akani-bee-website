@@ -28,7 +28,6 @@
 <meta property="og:image" content="https://akanibee.co.za/images/logo.png">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:site" content="@AkaniBEE">
 <!-- Organization Schema (site-wide) -->
 <script type="application/ld+json">
 {
@@ -62,7 +61,6 @@
     "longitude": 28.0611
   },
   "sameAs": [
-    "https://twitter.com/AkaniBEE",
     "https://www.linkedin.com/company/akani-bee-ratings"
   ],
   "priceRange": "$$",

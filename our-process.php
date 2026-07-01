@@ -101,6 +101,19 @@ include 'includes/page-hero.php';
   </div>
 </section>
 
+<?php
+$faq_eyebrow = 'Process Questions';
+$faq_heading = 'Questions About the Verification Process';
+$faq_subheading = 'How our B-BBEE verification process works from start to finish.';
+$faq_items = [
+  ['q' => 'What are the steps in the B-BBEE verification process?', 'a' => 'Our process has five stages: (1) you submit a verification request, (2) we agree on scope and provide an evidence checklist, (3) you submit your evidence, (4) our analysts conduct a desk review and, where required, a site visit, and (5) we issue your B-BBEE certificate. We keep you updated at every stage.'],
+  ['q' => 'Do you need to visit our premises for verification?', 'a' => 'For QSE and large enterprise verifications a site visit is usually part of the process to validate evidence and confirm operations. Many verifications can also be completed remotely with digital evidence, depending on the scorecard and entity type. We will confirm what your verification requires up front.'],
+  ['q' => 'What happens after my B-BBEE certificate is issued?', 'a' => 'Once issued, your certificate is valid for 12 months and can be used immediately for tenders, procurement, and compliance reporting. We keep your details on record and will remind you when it is time to renew so your B-BBEE status never lapses.'],
+  ['q' => 'How do I get started with a verification?', 'a' => 'Simply request a free quote through our contact form or give us a call. We will discuss your entity size, sector, and turnover, then send you a tailored evidence checklist so you know exactly what is needed to begin.'],
+];
+include 'includes/faq-section.php';
+?>
+
 <?php include 'includes/footer.php'; ?>
 </body>
 </html>

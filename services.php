@@ -90,6 +90,20 @@ include 'includes/page-hero.php';
   </div>
 </section>
 
+<?php
+$faq_eyebrow = 'Questions';
+$faq_heading = 'B-BBEE Verification FAQs';
+$faq_subheading = 'Common questions about our B-BBEE verification and compliance services.';
+$faq_items = [
+  ['q' => 'How long does B-BBEE verification take?', 'a' => 'A typical B-BBEE verification takes 2 to 4 weeks from the time all required evidence is submitted, depending on the size of your entity and the completeness of your documentation. EME affidavits are immediate, while QSE and large enterprise verifications involve evidence review and a site visit.'],
+  ['q' => 'What documents do I need for a B-BBEE verification?', 'a' => 'You will typically need your financial statements, a fixed asset register, shareholding and ownership records, payroll and skills development data, procurement records, and evidence of any enterprise and supplier development or socio-economic development contributions. Our team provides a full evidence checklist tailored to your scorecard.'],
+  ['q' => 'How much does a B-BBEE certificate cost?', 'a' => 'The cost depends on your entity size and turnover. Exempted Micro Enterprises (EMEs) generally only need an affidavit, while QSE and large enterprise verifications are priced according to scope. Contact us for a free, no-obligation quote for your business.'],
+  ['q' => 'Is Akani BEE Ratings SANAS accredited?', 'a' => 'Yes. Akani BEE Ratings is a SANAS-accredited B-BBEE verification agency, so the certificates we issue are recognised across all sectors and by government and corporate procurement processes throughout South Africa.'],
+  ['q' => 'How long is a B-BBEE certificate valid?', 'a' => 'A B-BBEE verification certificate is valid for 12 months from the date of issue. EME and QSE affidavits are also valid for one year, after which they must be renewed to keep your compliance status current.'],
+];
+include 'includes/faq-section.php';
+?>
+
 <?php include 'includes/footer.php'; ?>
 </body>
 </html>

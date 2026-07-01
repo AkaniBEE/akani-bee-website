@@ -77,6 +77,19 @@ include 'includes/page-hero.php';
   </div>
 </section>
 
+<?php
+$faq_eyebrow = 'Questions';
+$faq_heading = 'Frequently Asked Questions';
+$faq_subheading = 'More about the B-BBEE services we offer.';
+$faq_items = [
+  ['q' => 'What B-BBEE services does Akani BEE Ratings offer?', 'a' => 'We offer full B-BBEE verification and certification for EME, QSE, and large enterprises, evidence collation, scorecard gap analysis, and BEE training and insights. Whatever your entity size, our team verifies what you implemented during the financial year.'],
+  ['q' => 'What is a B-BBEE gap analysis and why do I need one?', 'a' => 'A gap analysis reviews your current position against the B-BBEE scorecard and identifies exactly where you can improve, particularly on Enterprise and Supplier Development and Skills Development. It gives you a clear roadmap to reach a better B-BBEE level before your formal verification.'],
+  ['q' => 'Do you help small businesses (EMEs and QSEs)?', 'a' => 'Absolutely. Size does not matter to us. Exempted Micro Enterprises usually only need an affidavit, while Qualifying Small Enterprises get a full but streamlined verification. We tailor our approach to businesses of every size across South Africa.'],
+  ['q' => 'What is B-BBEE evidence collation?', 'a' => 'Evidence collation is the process of gathering and organising all the documentation needed to prove your B-BBEE contributions. We guide you through it so your submission is complete and accurate, which speeds up verification and maximises your scorecard.'],
+];
+include 'includes/faq-section.php';
+?>
+
 <?php include 'includes/footer.php'; ?>
 </body>
 </html>

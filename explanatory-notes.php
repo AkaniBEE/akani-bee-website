@@ -17,7 +17,7 @@
 $page_title = 'Explanatory Notes';
 $page_subtitle = 'Download B-BBEE explanatory notes, compliance guidelines, and frameworks.';
 $breadcrumbs = [['label' => 'BEE Information'], ['label' => 'Explanatory Notes']];
-$hero_bg = 'images/background/bee-information.png';
+$hero_bg = 'images/background/bee-information.jpg';
 include 'includes/page-hero.php';
 
 $downloads = [

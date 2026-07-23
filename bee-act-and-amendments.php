@@ -17,7 +17,7 @@
 $page_title = 'B-BBEE Act & Amendments';
 $page_subtitle = 'Access the B-BBEE Act, Commissioner Practice Guide, and Verification Manual.';
 $breadcrumbs = [['label' => 'BEE Information'], ['label' => 'B-BBEE Act & Amendments']];
-$hero_bg = 'images/background/bee-information.png';
+$hero_bg = 'images/background/bee-information.jpg';
 include 'includes/page-hero.php';
 
 $downloads = [

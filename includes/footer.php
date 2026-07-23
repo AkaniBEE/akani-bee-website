@@ -91,9 +91,19 @@
 
   <!-- Footer Bottom -->
   <div class="border-t border-white/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
+    <!-- pb-24 keeps the credit line clear of the floating WhatsApp / scroll-top buttons -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-24">
       <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p class="text-sm text-gray-500">&copy; <?= date('Y') ?> Akani BEE Ratings. All rights reserved.</p>
+        <div class="text-center sm:text-left">
+          <p class="text-sm text-gray-500">&copy; <?= date('Y') ?> Akani BEE Ratings. All rights reserved.</p>
+          <p class="text-sm text-gray-300 mt-2 flex flex-wrap items-center justify-center sm:justify-start gap-x-1.5 gap-y-1">
+            <i data-lucide="code-2" class="w-4 h-4 text-primary"></i>
+            <span class="whitespace-nowrap">Designed &amp; built by</span>
+            <a href="https://www.linkedin.com/in/kutloano-yende-9333a42b6/" target="_blank" rel="noopener" class="font-semibold text-primary hover:text-primary-light transition-colors">Kutloano Yende</a>
+            &middot;
+            <a href="https://bantuncreativesolution.co.za/" target="_blank" rel="noopener" class="font-semibold text-primary hover:text-primary-light transition-colors">Bantun Creative Solution</a>
+          </p>
+        </div>
         <div class="flex items-center gap-6">
           <a href="popia-statement.php" class="text-xs text-gray-500 hover:text-primary transition-colors">Privacy Policy</a>
           <a href="impartiality-statement.php" class="text-xs text-gray-500 hover:text-primary transition-colors">Impartiality</a>
@@ -118,8 +128,8 @@
 </button>
 
 <script>
-// Initialize Lucide icons
-lucide.createIcons();
+// Initialize Lucide icons (script is deferred, so wait for DOMContentLoaded)
+document.addEventListener('DOMContentLoaded', () => lucide.createIcons());
 
 // Scroll to top button visibility
 const scrollBtn = document.getElementById('scrollTopBtn');

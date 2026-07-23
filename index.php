@@ -187,7 +187,7 @@
 
 <!-- Values Banner Section -->
 <section class="relative py-16 overflow-hidden">
-  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/image-4.png')"></div>
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/image-4.jpg')"></div>
   <div class="absolute inset-0 bg-black/30"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -221,7 +221,7 @@
 
 <!-- Contact Form Section -->
 <section class="relative pt-24 pb-28 overflow-hidden">
-  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/image-1.png')"></div>
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/image-1.jpg')"></div>
   <div class="absolute inset-0 bg-black/30"></div>
   <!-- Bottom fade into footer -->
   <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#1a1a2e]"></div>

@@ -15,7 +15,7 @@
 <?php
 $page_title = 'Appeals & Complaints Statement';
 $breadcrumbs = [['label' => 'Statements'], ['label' => 'Appeals & Complaints']];
-$hero_bg = 'images/background/bg-page-title-1-complaint.png';
+$hero_bg = 'images/background/bg-page-title-1-complaint.jpg';
 include 'includes/page-hero.php';
 ?>
 

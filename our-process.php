@@ -17,7 +17,7 @@
 $page_title = 'Our Process';
 $page_subtitle = 'A structured approach ensuring seamless B-BBEE verification from start to finish.';
 $breadcrumbs = [['label' => 'Services'], ['label' => 'Our Process']];
-$hero_bg = 'images/background/process-bg.png';
+$hero_bg = 'images/background/process-bg.jpg';
 include 'includes/page-hero.php';
 ?>
 

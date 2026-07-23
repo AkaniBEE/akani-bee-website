@@ -1,7 +1,7 @@
 <?php
 // Usage: $page_title, $page_subtitle, $breadcrumbs (array of ['label'=>'', 'url'=>''])
 // $hero_bg (optional background image)
-$hero_bg = isset($hero_bg) ? $hero_bg : 'images/background/bg-page-title-1.png';
+$hero_bg = isset($hero_bg) ? $hero_bg : 'images/background/bg-page-title-1.jpg';
 
 // Generate BreadcrumbList schema
 if (isset($breadcrumbs) && !empty($breadcrumbs)):

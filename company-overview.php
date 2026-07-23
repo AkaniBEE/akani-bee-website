@@ -17,7 +17,7 @@
 $page_title = 'Company Overview';
 $page_subtitle = 'Learn about our mission, vision, and the values that drive Akani BEE Ratings.';
 $breadcrumbs = [['label' => 'About'], ['label' => 'Company Overview']];
-$hero_bg = 'images/background/bg-page-title-1.png';
+$hero_bg = 'images/background/bg-page-title-1.jpg';
 include 'includes/page-hero.php';
 ?>
 
@@ -88,7 +88,7 @@ include 'includes/page-hero.php';
 
 <!-- Contact Form Section -->
 <section class="relative pt-24 pb-28 overflow-hidden">
-  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/contact-bg-ov.png')"></div>
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/contact-bg-ov.jpg')"></div>
   <div class="absolute inset-0 bg-black/30"></div>
   <!-- Bottom fade into footer -->
   <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#1a1a2e]"></div>

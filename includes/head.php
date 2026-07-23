@@ -12,7 +12,6 @@
   $canonical_suffix = ($canonical_path === 'index.php') ? '' : $canonical_path;
 ?>
 <link rel="canonical" href="https://akanibee.co.za/<?= htmlspecialchars($canonical_suffix, ENT_QUOTES, 'UTF-8') ?>">
-<link rel="dns-prefetch" href="https://cdn.tailwindcss.com">
 <link rel="dns-prefetch" href="https://unpkg.com">
 <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -35,7 +34,7 @@
   "@type": ["Organization", "LocalBusiness"],
   "@id": "https://akanibee.co.za/#organization",
   "name": "Akani BEE Ratings (Pty) Ltd",
-  "alternateName": "Akani BEE Ratings",
+  "alternateName": ["Akani BEE Ratings", "Akani", "Akani BEE", "AkaniBEE"],
   "url": "https://akanibee.co.za",
   "logo": "https://akanibee.co.za/images/logo.png",
   "image": "https://akanibee.co.za/images/logo.png",
@@ -110,49 +109,27 @@
   }
 }
 </script>
-<!-- Tailwind CSS CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        primary: { DEFAULT: '#ce9b01', hover: '#b88a01', light: '#f5e6b8', dark: '#9d7600', foreground: '#ffffff' },
-        secondary: { DEFAULT: '#070D32', light: '#1a2255', dark: '#030618' },
-        muted: { DEFAULT: '#f5f5f5', foreground: '#737373' },
-        accent: { DEFAULT: '#f5f5f5', foreground: '#171717' },
-        input: '#e5e5e5',
-        ring: '#ce9b01',
-        border: '#e5e5e5',
-        foreground: '#0a0a0a',
-        background: '#ffffff',
-        popover: { DEFAULT: '#ffffff', foreground: '#0a0a0a' },
-        destructive: { DEFAULT: '#ef4444', foreground: '#b91c1c' },
-        success: { DEFAULT: '#22c55e', foreground: '#166534' },
-      },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-      },
-      animation: {
-        'fade-in': 'fadeIn 0.6s ease-out',
-        'slide-up': 'slideUp 0.6s ease-out',
-        'slide-down': 'slideDown 0.3s ease-out',
-      },
-      keyframes: {
-        fadeIn: { '0%': { opacity: '0' }, '100%': { opacity: '1' } },
-        slideUp: { '0%': { opacity: '0', transform: 'translateY(20px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
-        slideDown: { '0%': { opacity: '0', transform: 'translateY(-10px)' }, '100%': { opacity: '1', transform: 'translateY(0)' } },
-      },
-    },
-  },
+<!-- WebSite Schema (brand-name signal for search engines) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://akanibee.co.za/#website",
+  "url": "https://akanibee.co.za/",
+  "name": "Akani BEE Ratings",
+  "alternateName": ["Akani", "AkaniBEE", "Akani BEE"],
+  "publisher": { "@id": "https://akanibee.co.za/#organization" },
+  "inLanguage": "en-ZA"
 }
 </script>
+<!-- Tailwind CSS (prebuilt — regenerate with: npx tailwindcss@3.4.17 -c tailwind.config.js -i tailwind.input.css -o css/tailwind.css --minify) -->
+<link rel="stylesheet" href="css/tailwind.css">
 <!-- Google Fonts - Inter -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<!-- Lucide Icons CDN -->
-<script src="https://unpkg.com/lucide@latest"></script>
+<!-- Lucide Icons CDN (deferred; icons initialised on DOMContentLoaded in footer.php) -->
+<script defer src="https://unpkg.com/lucide@0.525.0/dist/umd/lucide.min.js"></script>
 <style>
   * { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
   [x-cloak] { display: none !important; }

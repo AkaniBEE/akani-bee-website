@@ -17,7 +17,7 @@
 $page_title = 'Affidavits';
 $page_subtitle = 'Download affidavit templates for EME and QSE entities across various sector codes.';
 $breadcrumbs = [['label' => 'BEE Information'], ['label' => 'Affidavits']];
-$hero_bg = 'images/background/bee-information.png';
+$hero_bg = 'images/background/bee-information.jpg';
 include 'includes/page-hero.php';
 
 $downloads = [

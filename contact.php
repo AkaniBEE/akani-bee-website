@@ -17,7 +17,7 @@
 $page_title = 'Contact Us';
 $page_subtitle = 'Reach out for B-BBEE verification inquiries, guidance, or any questions you might have.';
 $breadcrumbs = [['label' => 'Contact Us']];
-$hero_bg = 'images/background/contact-bg.png';
+$hero_bg = 'images/background/contact-bg.jpg';
 include 'includes/page-hero.php';
 ?>
 

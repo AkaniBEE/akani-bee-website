@@ -1,7 +1,10 @@
 {
   "builds": [
-    { "src": "*.php", "use": "vercel-php@0.7.2" },
-    { "src": "includes/**", "use": "@vercel/static" },
+    {
+      "src": "api/index.php",
+      "use": "vercel-php@0.7.2",
+      "config": { "includeFiles": "{*.php,includes/**,lib/**,downloads/**}" }
+    },
     { "src": "css/**", "use": "@vercel/static" },
     { "src": "js/**", "use": "@vercel/static" },
     { "src": "images/**", "use": "@vercel/static" },
@@ -14,8 +17,8 @@
     { "src": "sitemap.xml", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/", "dest": "/index.php" },
+    { "src": "/", "dest": "/api/index.php" },
     { "handle": "filesystem" },
-    { "src": "/(.*)\\.php$", "dest": "/$1.php" }
+    { "src": "/(.*)\\.php$", "dest": "/api/index.php" }
   ]
 }

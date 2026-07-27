@@ -4,3 +4,8 @@ New/
 .git/
 .DS_Store
 node_modules/
+.claude/
+.agents/
+*.docx
+~$*
+skills-lock.json

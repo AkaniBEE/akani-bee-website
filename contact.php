@@ -75,6 +75,9 @@ include 'includes/page-hero.php';
                 class="coss-textarea"></textarea>
             </div>
           </div>
+          <!-- Bot protection -->
+          <?php form_guard_honeypot(); ?>
+          <?php turnstile_widget('light'); ?>
           <!-- CossUI Button -->
           <button type="submit" class="coss-btn coss-btn--default coss-btn--lg">
             <i data-lucide="send" class="w-4 h-4"></i> Submit

@@ -1,8 +1,16 @@
 <?php
 require_once __DIR__ . '/includes/mailer.php';
+require_once __DIR__ . '/includes/form-guard.php';
 
 // Only process POST requests.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Bot protection must pass before anything is sent.
+    if (!form_guard_passes()) {
+        http_response_code(400);
+        echo FORM_GUARD_MESSAGE;
+        exit;
+    }
+
     // Get the form fields and remove whitespace.
     $name = strip_tags(trim($_POST["username"] ?? ''));
     $name = str_replace(array("\r", "\n"), array(" ", " "), $name);

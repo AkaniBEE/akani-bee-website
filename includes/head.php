@@ -8,6 +8,7 @@
 <meta name="geo.position" content="-26.0367;28.0611">
 <meta name="ICBM" content="-26.0367, 28.0611">
 <?php
+  require_once __DIR__ . '/form-guard.php';
   $canonical_path = basename($_SERVER['SCRIPT_NAME'] ?? 'index.php');
   $canonical_suffix = ($canonical_path === 'index.php') ? '' : $canonical_path;
 ?>
@@ -130,6 +131,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <!-- Lucide Icons CDN (deferred; icons initialised on DOMContentLoaded in footer.php) -->
 <script defer src="https://unpkg.com/lucide@0.525.0/dist/umd/lucide.min.js"></script>
+<?php if (turnstile_enabled()): ?>
+<!-- Cloudflare Turnstile (bot protection for the public forms) -->
+<link rel="dns-prefetch" href="https://challenges.cloudflare.com">
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+<?php endif; ?>
 <style>
   * { font-family: 'Inter', system-ui, -apple-system, sans-serif; }
   [x-cloak] { display: none !important; }

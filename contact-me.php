@@ -1,7 +1,14 @@
 <?php
 require_once __DIR__ . '/includes/mailer.php';
+require_once __DIR__ . '/includes/form-guard.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["email"])) {
+    // Bot protection must pass before anything is sent.
+    if (!form_guard_passes()) {
+        echo "<script>alert(" . form_guard_js_message() . "); window.history.back();</script>";
+        exit;
+    }
+
     $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
 
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) {

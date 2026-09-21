@@ -1,3 +1,4 @@
+<?php require_once __DIR__ . '/form-guard.php'; ?>
 <!-- Footer -->
 <footer class="relative bg-secondary-dark text-white">
   <!-- Top Divider / Glow Line -->
@@ -83,6 +84,9 @@
             </div>
             <p class="coss-field-description text-gray-500">No spam. We'll reach out with your free report.</p>
           </div>
+          <!-- Bot protection -->
+          <?php form_guard_honeypot(); ?>
+          <?php turnstile_widget('dark'); ?>
         </form>
       </div>
 
@@ -130,6 +134,15 @@
 <script>
 // Initialize Lucide icons (script is deferred, so wait for DOMContentLoaded)
 document.addEventListener('DOMContentLoaded', () => lucide.createIcons());
+
+// Turnstile tokens are single-use. When the browser restores this page from
+// the back/forward cache (e.g. after window.history.back() on a failed submit)
+// the rendered widget still holds a spent token, so ask it for a fresh one.
+window.addEventListener('pageshow', (event) => {
+  if (event.persisted && window.turnstile) {
+    document.querySelectorAll('.cf-turnstile').forEach((el) => window.turnstile.reset(el));
+  }
+});
 
 // Scroll to top button visibility
 const scrollBtn = document.getElementById('scrollTopBtn');

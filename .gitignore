@@ -8,3 +8,7 @@
 .DS_Store
 Thumbs.db
 .vercel
+
+# Local environment overrides (never commit secrets)
+.env
+.env.local

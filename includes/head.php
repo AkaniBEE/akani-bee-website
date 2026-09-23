@@ -125,6 +125,10 @@
 </script>
 <!-- Tailwind CSS (prebuilt — regenerate with: npx tailwindcss@3.4.17 -c tailwind.config.js -i tailwind.input.css -o css/tailwind.css --minify) -->
 <link rel="stylesheet" href="css/tailwind.css">
+<?php if (!empty($hero_preload)): ?>
+<!-- Start the hero download during HTML parsing rather than after Alpine boots. -->
+<link rel="preload" as="image" href="<?= htmlspecialchars($hero_preload, ENT_QUOTES, 'UTF-8') ?>" fetchpriority="high">
+<?php endif; ?>
 <!-- Google Fonts - Inter -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

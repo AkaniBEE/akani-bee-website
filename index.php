@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php include 'includes/head.php'; ?>
+<?php $hero_preload = 'images/main-slider/2.webp'; include 'includes/head.php'; ?>
 <title>B-BBEE Verification Agency in South Africa | Akani BEE Ratings</title>
 <meta name="description" content="SANAS-accredited B-BBEE verification agency in Sandton. BEE certificates, compliance verification, gap analysis & training for SA businesses.">
 <meta name="keywords" content="B-BBEE verification agency, BEE verification agency South Africa, BEE certificate, B-BBEE compliance services, BEE rating agency Johannesburg, BEE verification Sandton, SANAS accredited BEE agency, BEE audit services, BEE consulting South Africa">
@@ -15,14 +15,26 @@
 
 <!-- Hero Slider Section -->
 <section x-data="{ current: 0, paused: false, slides: [
-  { image: 'images/main-slider/2.jpg', title: 'Achieve Your Ideal', highlight: 'B-BBEE Level', text: 'Whether you\'re an EME, QSE, or large enterprise, our SANAS-accredited team helps you reach the B-BBEE level your business deserves. 51% Black-owned and trusted across South Africa.' },
-  { image: 'images/main-slider/3.jpg', title: 'Maximise Your Scorecard', highlight: 'With Expert Guidance', text: 'From evidence collation to full verification, we simplify the process so you can focus on growing your business. Let us handle the compliance.' },
-  { image: 'images/main-slider/1.jpg', title: 'Close the Gap', highlight: 'Grow Your Score', text: 'Our gap analysis pinpoints exactly where to improve on Enterprise Development, Supplier Development, and Skills. A clear roadmap to a better B-BBEE rating.' }
+  { image: 'images/main-slider/2.webp', title: 'Achieve Your Ideal', highlight: 'B-BBEE Level', text: 'Whether you\'re an EME, QSE, or large enterprise, our SANAS-accredited team helps you reach the B-BBEE level your business deserves. 51% Black-owned and trusted across South Africa.' },
+  { image: 'images/main-slider/3.webp', title: 'Maximise Your Scorecard', highlight: 'With Expert Guidance', text: 'From evidence collation to full verification, we simplify the process so you can focus on growing your business. Let us handle the compliance.' },
+  { image: 'images/main-slider/1.webp', title: 'Close the Gap', highlight: 'Grow Your Score', text: 'Our gap analysis pinpoints exactly where to improve on Enterprise Development, Supplier Development, and Skills. A clear roadmap to a better B-BBEE rating.' }
 ] }" x-init="
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    setInterval(() => { if (!paused) current = (current + 1) % slides.length }, 7000)
+    // Hold the first slide until the page has settled. Rotating earlier makes
+    // each new slide a fresh Largest Contentful Paint candidate, which pushed
+    // the measured LCP out to ~11s on mobile.
+    setTimeout(() => setInterval(() => { if (!paused) current = (current + 1) % slides.length }, 7000), 9000)
   }
 " class="relative h-[600px] sm:h-[700px] lg:h-[800px] overflow-hidden bg-secondary" aria-roledescription="carousel" aria-label="Featured services">
+
+  <!-- First frame, rendered server-side. The slides below are built by Alpine,
+       so their background images are invisible to the preload scanner and cannot
+       start downloading until Alpine has loaded and initialised. This <img> is the
+       LCP element and begins downloading while the HTML is still being parsed. -->
+  <img src="images/main-slider/2.webp" alt="" aria-hidden="true" width="1400" height="935"
+       fetchpriority="high" decoding="async"
+       class="absolute inset-0 w-full h-full object-cover">
+  <div class="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/60 to-secondary/20"></div>
 
   <!-- Slides -->
   <template x-for="(slide, index) in slides" :key="index">
@@ -187,7 +199,7 @@
 
 <!-- Values Banner Section -->
 <section class="relative py-16 overflow-hidden">
-  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/image-4.jpg')"></div>
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/image-4.webp')"></div>
   <div class="absolute inset-0 bg-black/30"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -221,7 +233,7 @@
 
 <!-- Contact Form Section -->
 <section class="relative pt-24 pb-28 overflow-hidden">
-  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/image-1.jpg')"></div>
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/image-1.webp')"></div>
   <div class="absolute inset-0 bg-black/30"></div>
   <!-- Bottom fade into footer -->
   <div class="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-b from-transparent to-[#1a1a2e]"></div>

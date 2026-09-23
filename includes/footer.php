@@ -15,7 +15,7 @@
       <!-- About Column -->
       <div class="lg:col-span-1">
         <a href="index.php" class="inline-block mb-6">
-          <img src="images/logo.png" alt="Akani BEE Ratings" class="h-12 w-auto brightness-0 invert opacity-90">
+          <img src="images/logo.png" alt="Akani BEE Ratings" width="176" height="71" class="h-12 w-auto brightness-0 invert opacity-90">
         </a>
         <h3 class="text-lg font-semibold mb-3">What is Akani?</h3>
         <p class="text-sm text-gray-400 leading-relaxed mb-6">AKANI is a Tsonga word meaning "Building together." Our mission follows the same philosophy: "Together WE Build."</p>

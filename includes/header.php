@@ -45,7 +45,7 @@ $cp = $current_page !== basename($_SERVER['PHP_SELF']) ? $current_page : $curren
     <div class="flex items-center justify-between h-16 lg:h-20">
       <!-- Logo -->
       <a href="index.php" class="flex-shrink-0">
-        <img src="images/logo.png" alt="Akani BEE Ratings" class="h-10 lg:h-14 w-auto">
+        <img src="images/logo.png" alt="Akani BEE Ratings" width="176" height="71" class="h-10 lg:h-14 w-auto">
       </a>
 
       <!-- Desktop Navigation -->

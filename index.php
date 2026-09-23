@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php $hero_preload = 'images/main-slider/2.webp'; include 'includes/head.php'; ?>
+<?php include 'includes/head.php'; ?>
 <title>B-BBEE Verification Agency in South Africa | Akani BEE Ratings</title>
 <meta name="description" content="SANAS-accredited B-BBEE verification agency in Sandton. BEE certificates, compliance verification, gap analysis & training for SA businesses.">
 <meta name="keywords" content="B-BBEE verification agency, BEE verification agency South Africa, BEE certificate, B-BBEE compliance services, BEE rating agency Johannesburg, BEE verification Sandton, SANAS accredited BEE agency, BEE audit services, BEE consulting South Africa">
@@ -31,7 +31,9 @@
        so their background images are invisible to the preload scanner and cannot
        start downloading until Alpine has loaded and initialised. This <img> is the
        LCP element and begins downloading while the HTML is still being parsed. -->
-  <img src="images/main-slider/2.webp" alt="" aria-hidden="true" width="1400" height="935"
+  <img src="images/main-slider/2.webp"
+       srcset="images/main-slider/2-760.webp 760w, images/main-slider/2.webp 1400w"
+       sizes="100vw" alt="" aria-hidden="true" width="1400" height="935"
        fetchpriority="high" decoding="async"
        class="absolute inset-0 w-full h-full object-cover">
   <div class="absolute inset-0 bg-gradient-to-r from-secondary/90 via-secondary/60 to-secondary/20"></div>

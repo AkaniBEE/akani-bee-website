@@ -12,8 +12,6 @@ Disallow: /contact-me.php
 Disallow: /download.php
 Disallow: /downloads.php
 Disallow: /includes/
-Disallow: /Old_Site/
-Disallow: /New/
 Disallow: /*.zip$
 
 # Crawl-delay for politeness

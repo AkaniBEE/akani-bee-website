@@ -17,7 +17,7 @@
 $page_title = 'Frequently Asked Questions';
 $page_subtitle = 'Find answers to common questions about B-BBEE compliance and our verification services.';
 $breadcrumbs = [['label' => 'FAQs']];
-$hero_bg = 'images/background/bg-page-title-1-faq.jpg';
+$hero_bg = 'images/background/bg-page-title-1-faq.webp';
 include 'includes/page-hero.php';
 ?>
 

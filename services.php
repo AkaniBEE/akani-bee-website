@@ -17,7 +17,7 @@
 $page_title = 'Our Services';
 $page_subtitle = 'Comprehensive B-BBEE services to help your business grow and comply.';
 $breadcrumbs = [['label' => 'Services'], ['label' => 'Our Offerings']];
-$hero_bg = 'images/background/what-we-offer.jpg';
+$hero_bg = 'images/background/what-we-offer.webp';
 include 'includes/page-hero.php';
 ?>
 
@@ -66,7 +66,7 @@ include 'includes/page-hero.php';
 
 <!-- Values Banner -->
 <section class="relative py-16 overflow-hidden">
-  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/image-4.jpg')"></div>
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/image-4.webp')"></div>
   <div class="absolute inset-0 bg-black/30"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">

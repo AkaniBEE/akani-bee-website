@@ -17,7 +17,7 @@
 $page_title = 'What We Offer';
 $page_subtitle = 'Comprehensive B-BBEE services tailored for businesses of all sizes.';
 $breadcrumbs = [['label' => 'Services'], ['label' => 'Our Offerings']];
-$hero_bg = 'images/background/what-we-offer.jpg';
+$hero_bg = 'images/background/what-we-offer.webp';
 include 'includes/page-hero.php';
 ?>
 
@@ -66,7 +66,7 @@ include 'includes/page-hero.php';
 
 <!-- CTA Section -->
 <section class="relative py-20 overflow-hidden">
-  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/image-4.jpg')"></div>
+  <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/background/image-4.webp')"></div>
   <div class="absolute inset-0 bg-black/30"></div>
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
     <h2 class="text-3xl sm:text-4xl font-bold text-white">Ready to Get Started?</h2>

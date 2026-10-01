@@ -15,7 +15,7 @@
       <!-- About Column -->
       <div class="lg:col-span-1">
         <a href="index.php" class="inline-block mb-6">
-          <img src="images/logo.png" alt="Akani BEE Ratings" class="h-12 w-auto brightness-0 invert opacity-90">
+          <img src="images/logo.png" alt="Akani BEE Ratings" width="176" height="71" class="h-12 w-auto brightness-0 invert opacity-90">
         </a>
         <h3 class="text-lg font-semibold mb-3">What is Akani?</h3>
         <p class="text-sm text-gray-400 leading-relaxed mb-6">AKANI is a Tsonga word meaning "Building together." Our mission follows the same philosophy: "Together WE Build."</p>
@@ -103,9 +103,7 @@
           <p class="text-sm text-gray-300 mt-2 flex flex-wrap items-center justify-center sm:justify-start gap-x-1.5 gap-y-1">
             <i data-lucide="code-2" class="w-4 h-4 text-primary"></i>
             <span class="whitespace-nowrap">Designed &amp; built by</span>
-            <a href="https://www.linkedin.com/in/kutloano-yende-9333a42b6/" target="_blank" rel="noopener" class="font-semibold text-primary hover:text-primary-light transition-colors">Kutloano Yende</a>
-            &middot;
-            <a href="https://bantuncreativesolution.co.za/" target="_blank" rel="noopener" class="font-semibold text-primary hover:text-primary-light transition-colors">Bantun Creative Solution</a>
+            <a href="https://www.bantucreativesolutions.co.za/" target="_blank" rel="noopener" class="font-semibold text-primary hover:text-primary-light transition-colors">Bantu Creative Solutions</a>
           </p>
         </div>
         <div class="flex items-center gap-6">

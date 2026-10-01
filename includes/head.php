@@ -128,7 +128,13 @@
 <!-- Google Fonts - Inter -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<!-- Loaded asynchronously: as a normal stylesheet this blocked first paint for
+     ~1.4s on a throttled mobile connection, which was the largest single cost
+     in both FCP and LCP once the hero image stopped waiting on JavaScript.
+     The face already uses display=swap, so text paints in the fallback first
+     either way. -->
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
 <!-- Lucide Icons CDN (deferred; icons initialised on DOMContentLoaded in footer.php) -->
 <script defer src="https://unpkg.com/lucide@0.525.0/dist/umd/lucide.min.js"></script>
 <?php if (turnstile_enabled()): ?>

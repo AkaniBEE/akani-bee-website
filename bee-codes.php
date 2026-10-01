@@ -17,7 +17,7 @@
 $page_title = 'B-BBEE Codes';
 $page_subtitle = 'Access and download the latest B-BBEE codes of good practice and sector-specific codes.';
 $breadcrumbs = [['label' => 'BEE Information'], ['label' => 'B-BBEE Codes']];
-$hero_bg = 'images/background/bee-information.jpg';
+$hero_bg = 'images/background/bee-information.webp';
 include 'includes/page-hero.php';
 
 $downloads = [

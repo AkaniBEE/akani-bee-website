@@ -54,12 +54,30 @@ $downloads = [
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
       <?php foreach ($downloads as $dl): ?>
-      <a href="<?= $dl['url'] ?>" class="group flex items-center gap-3 p-4 rounded-xl border border-border bg-white hover:border-primary/30 hover:shadow-lg transition-all duration-300">
+      <?php
+        // A code with no file yet points visitors at the contact page instead of
+        // a link that goes nowhere. Any entry with an empty or '#' url behaves
+        // this way, so adding the real link later needs no markup change.
+        $available = !empty($dl['url']) && $dl['url'] !== '#';
+      ?>
+      <?php if ($available): ?>
+      <a href="<?= htmlspecialchars($dl['url'], ENT_QUOTES, 'UTF-8') ?>" class="group flex items-center gap-3 p-4 rounded-xl border border-border bg-white hover:border-primary/30 hover:shadow-lg transition-all duration-300">
         <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
           <i data-lucide="download" class="w-5 h-5 text-primary group-hover:text-white transition-colors"></i>
         </div>
-        <span class="text-sm font-medium text-secondary group-hover:text-primary transition-colors leading-snug"><?= $dl['name'] ?></span>
+        <span class="text-sm font-medium text-secondary group-hover:text-primary transition-colors leading-snug"><?= htmlspecialchars($dl['name'], ENT_QUOTES, 'UTF-8') ?></span>
       </a>
+      <?php else: ?>
+      <a href="contact.php" class="group flex items-center gap-3 p-4 rounded-xl border border-dashed border-border bg-muted/30 hover:border-primary/30 hover:shadow-lg transition-all duration-300">
+        <div class="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0 group-hover:bg-primary transition-colors">
+          <i data-lucide="mail" class="w-5 h-5 text-muted-foreground group-hover:text-white transition-colors"></i>
+        </div>
+        <span class="text-sm leading-snug">
+          <span class="font-medium text-secondary group-hover:text-primary transition-colors block"><?= htmlspecialchars($dl['name'], ENT_QUOTES, 'UTF-8') ?></span>
+          <span class="text-xs text-muted-foreground">Available on request</span>
+        </span>
+      </a>
+      <?php endif; ?>
       <?php endforeach; ?>
     </div>
   </div>

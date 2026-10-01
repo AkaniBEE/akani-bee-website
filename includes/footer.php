@@ -103,9 +103,7 @@
           <p class="text-sm text-gray-300 mt-2 flex flex-wrap items-center justify-center sm:justify-start gap-x-1.5 gap-y-1">
             <i data-lucide="code-2" class="w-4 h-4 text-primary"></i>
             <span class="whitespace-nowrap">Designed &amp; built by</span>
-            <a href="https://www.linkedin.com/in/kutloano-yende-9333a42b6/" target="_blank" rel="noopener" class="font-semibold text-primary hover:text-primary-light transition-colors">Kutloano Yende</a>
-            &middot;
-            <a href="https://bantuncreativesolution.co.za/" target="_blank" rel="noopener" class="font-semibold text-primary hover:text-primary-light transition-colors">Bantun Creative Solution</a>
+            <a href="https://www.bantucreativesolutions.co.za/" target="_blank" rel="noopener" class="font-semibold text-primary hover:text-primary-light transition-colors">Bantu Creative Solutions</a>
           </p>
         </div>
         <div class="flex items-center gap-6">

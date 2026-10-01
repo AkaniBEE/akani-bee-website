@@ -138,9 +138,11 @@
 <!-- Lucide Icons CDN (deferred; icons initialised on DOMContentLoaded in footer.php) -->
 <script defer src="https://unpkg.com/lucide@0.525.0/dist/umd/lucide.min.js"></script>
 <?php if (turnstile_enabled()): ?>
-<!-- Cloudflare Turnstile (bot protection for the public forms) -->
+<!-- Cloudflare Turnstile. Loaded lazily from footer.php rather than here: the
+     widget sits in the footer newsletter form, so it is present on every page,
+     and fetching it eagerly put the whole challenge platform in the critical
+     path of pages nobody submits a form on. -->
 <link rel="dns-prefetch" href="https://challenges.cloudflare.com">
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <?php endif; ?>
 <style>
   * { font-family: 'Inter', system-ui, -apple-system, sans-serif; }

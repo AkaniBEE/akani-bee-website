@@ -133,6 +133,88 @@
 // Initialize Lucide icons (script is deferred, so wait for DOMContentLoaded)
 document.addEventListener('DOMContentLoaded', () => lucide.createIcons());
 
+// Cloudflare Turnstile, loaded on demand.
+//
+// The widget is in the footer, so it appears on every page. Fetching the
+// challenge platform eagerly made it by far the heaviest thing on pages where
+// nobody submits anything, and it competed for bandwidth with the hero image,
+// Alpine and the icon library.
+//
+// It is fetched on the first sign of a real visitor - a pointer, a key, a
+// scroll - or once the page has gone idle, whichever comes first. That is well
+// before anyone can fill in a form, so a token is always ready at submit time,
+// and the server verifies every submission regardless.
+(function () {
+  const holders = document.querySelectorAll('.cf-turnstile');
+  if (!holders.length) return;
+
+  let started = false;
+  const events = ['pointerdown', 'keydown', 'scroll', 'touchstart'];
+
+  function load() {
+    if (started) return;
+    started = true;
+    events.forEach((e) => window.removeEventListener(e, load));
+
+    window.onloadTurnstileCallback = function () {
+      holders.forEach((el) => {
+        if (el.dataset.rendered) return;
+        el.dataset.rendered = '1';
+        window.turnstile.render(el, {
+          sitekey: el.dataset.sitekey,
+          theme: el.dataset.theme,
+          size: el.dataset.size,
+          'refresh-expired': 'auto'
+        });
+      });
+    };
+
+    const s = document.createElement('script');
+    s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onloadTurnstileCallback';
+    s.async = true;
+    s.defer = true;
+    document.head.appendChild(s);
+  }
+
+  events.forEach((e) => window.addEventListener(e, load, { once: true, passive: true }));
+
+  // Fallback for a visitor who reads without touching anything.
+  window.addEventListener('load', function () {
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(load, { timeout: 4000 });
+    } else {
+      setTimeout(load, 2500);
+    }
+  });
+
+  // A form submitted before the widget has produced a token would be rejected
+  // server-side, so hold the submit until it has one.
+  document.querySelectorAll('form').forEach((form) => {
+    if (!form.querySelector('.cf-turnstile')) return;
+    form.addEventListener('submit', function (ev) {
+      const field = form.querySelector('[name="cf-turnstile-response"]');
+      if (!field || !field.value) {
+        ev.preventDefault();
+        load();
+        const btn = form.querySelector('[type="submit"]');
+        if (btn) btn.disabled = true;
+        const waitFor = setInterval(function () {
+          const f = form.querySelector('[name="cf-turnstile-response"]');
+          if (f && f.value) {
+            clearInterval(waitFor);
+            if (btn) btn.disabled = false;
+            form.submit();
+          }
+        }, 250);
+        setTimeout(function () {
+          clearInterval(waitFor);
+          if (btn) btn.disabled = false;
+        }, 15000);
+      }
+    });
+  });
+})();
+
 // Turnstile tokens are single-use. When the browser restores this page from
 // the back/forward cache (e.g. after window.history.back() on a failed submit)
 // the rendered widget still holds a spent token, so ask it for a fresh one.

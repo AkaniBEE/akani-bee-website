@@ -384,6 +384,64 @@
     font-size: 0.75rem;
     color: #b91c1c;
   }
+
+  /* CossUI Marquee — continuously scrolling logo strip.
+     The track holds two identical sets, so translating it by exactly -50%
+     lands the second set where the first began and the loop is seamless. */
+  .coss-marquee {
+    width: 100%;
+    overflow: hidden;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  }
+  .coss-marquee__track {
+    display: flex;
+    width: max-content;
+    animation: coss-marquee 42s linear infinite;
+  }
+  .coss-marquee:hover .coss-marquee__track,
+  .coss-marquee:focus-within .coss-marquee__track {
+    animation-play-state: paused;
+  }
+  .coss-marquee__set {
+    display: flex;
+    align-items: center;
+    gap: 3.5rem;
+    margin: 0;
+    padding: 0 1.75rem;
+    list-style: none;
+  }
+  .coss-marquee__item {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .coss-marquee__item img {
+    height: 3rem;
+    width: auto;
+    max-width: 11rem;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.65;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+  }
+  .coss-marquee__item:hover img,
+  .coss-marquee__item a:focus-visible img {
+    filter: grayscale(0%);
+    opacity: 1;
+  }
+  @keyframes coss-marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  /* Anyone who has asked for less motion gets a static, scrollable strip. */
+  @media (prefers-reduced-motion: reduce) {
+    .coss-marquee { overflow-x: auto; }
+    .coss-marquee__track { animation: none; }
+    .coss-marquee__set:nth-child(2) { display: none; }
+    .coss-marquee__item img { filter: none; opacity: 1; }
+  }
 </style>
 <!-- Alpine.js for interactivity -->
 <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>

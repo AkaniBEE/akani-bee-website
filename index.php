@@ -156,6 +156,16 @@
   </div>
 </section>
 
+<?php
+// Client / sponsor logos. Add entries here and the strip appears; leave the
+// array empty and the whole section stays off the page.
+//   ['name' => 'Company Name', 'logo' => 'images/clients/company.png', 'url' => 'https://example.co.za'],
+// Logos live in images/clients/ — ideally transparent PNG or SVG, around
+// 400x160, with the artwork trimmed close to the edges.
+$client_logos = [];
+include 'includes/clients-section.php';
+?>
+
 <!-- Services Section -->
 <section class="py-20 bg-muted">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

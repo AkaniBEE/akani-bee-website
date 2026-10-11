@@ -408,7 +408,9 @@
     align-items: center;
     gap: 3.5rem;
     margin: 0;
-    padding: 0 1.75rem;
+    /* vertical padding leaves room for the hover lift, which the strip's
+       overflow:hidden would otherwise clip */
+    padding: 0.75rem 1.75rem;
     list-style: none;
   }
   .coss-marquee__item {
@@ -422,14 +424,15 @@
     width: auto;
     max-width: 11rem;
     object-fit: contain;
-    filter: grayscale(100%);
-    opacity: 0.65;
-    transition: filter 0.3s ease, opacity 0.3s ease;
+    /* logos show in their own colours; hovering lifts the one under the
+       cursor rather than colouring it in */
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+                filter 0.35s ease;
   }
   .coss-marquee__item:hover img,
   .coss-marquee__item a:focus-visible img {
-    filter: grayscale(0%);
-    opacity: 1;
+    transform: translateY(-5px) scale(1.1);
+    filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.16));
   }
   /* Fallback for a client with no logo file yet — the name set as a wordmark,
      weighted to sit at roughly the same visual size as the logos beside it. */
@@ -440,14 +443,13 @@
     font-weight: 700;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: #52525b;
-    opacity: 0.7;
-    transition: color 0.3s ease, opacity 0.3s ease;
+    color: #1a1a2e;
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), color 0.35s ease;
   }
   .coss-marquee__item:hover .coss-marquee__wordmark,
   .coss-marquee__item a:focus-visible .coss-marquee__wordmark {
-    color: #1a1a2e;
-    opacity: 1;
+    transform: translateY(-5px) scale(1.1);
+    color: #c8941f;
   }
 
   @keyframes coss-marquee {
@@ -459,8 +461,10 @@
     .coss-marquee { overflow-x: auto; }
     .coss-marquee__track { animation: none; }
     .coss-marquee__set:nth-child(2) { display: none; }
-    .coss-marquee__item img { filter: none; opacity: 1; }
-    .coss-marquee__wordmark { opacity: 1; }
+    .coss-marquee__item img,
+    .coss-marquee__wordmark { transition: none; }
+    .coss-marquee__item:hover img,
+    .coss-marquee__item:hover .coss-marquee__wordmark { transform: none; }
   }
 </style>
 <!-- Alpine.js for interactivity -->

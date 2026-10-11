@@ -397,9 +397,10 @@
   .coss-marquee__track {
     display: flex;
     width: max-content;
-    animation: coss-marquee 42s linear infinite;
+    animation: coss-marquee var(--coss-marquee-duration, 28s) linear infinite;
   }
-  .coss-marquee:hover .coss-marquee__track,
+  /* Only keyboard focus pauses the scroll. Pausing on hover meant the strip
+     froze the moment anyone pointed at it, which reads as broken. */
   .coss-marquee:focus-within .coss-marquee__track {
     animation-play-state: paused;
   }

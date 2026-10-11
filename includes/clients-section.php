@@ -30,6 +30,11 @@ if (!empty($client_logos)):
   // and translating it by -50% would scroll a visible gap across. Repeat the
   // list until each set is comfortably wider than any viewport.
   $repeat = max(1, (int) ceil(9 / count($client_logos)));
+
+  // Hold the scroll at a constant speed regardless of how many logos there
+  // are: a fixed duration would crawl with four clients and race with twenty.
+  $items_per_set = count($client_logos) * $repeat;
+  $marquee_seconds = max(18, (int) round($items_per_set * 1.9));
 ?>
 <!-- Client / Sponsor Logos -->
 <section class="py-16 lg:py-20 bg-muted overflow-hidden" aria-labelledby="clients-heading">
@@ -45,7 +50,7 @@ if (!empty($client_logos)):
   </div>
 
   <div class="coss-marquee mt-12" role="region" aria-label="Client logos">
-    <div class="coss-marquee__track">
+    <div class="coss-marquee__track" style="--coss-marquee-duration: <?= $marquee_seconds ?>s">
       <?php for ($copy = 0; $copy < 2; $copy++): ?>
       <ul class="coss-marquee__set"<?= $copy ? ' aria-hidden="true"' : '' ?>>
         <?php for ($r = 0; $r < $repeat; $r++): ?>

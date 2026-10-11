@@ -163,10 +163,13 @@
 // Logos live in images/clients/ — ideally transparent PNG or SVG, around
 // 400x160, with the artwork trimmed close to the edges.
 $client_logos = [
-  ['name' => 'Bidvest Waltons'],
-  ['name' => 'Konica Minolta SA'],
-  ['name' => 'DEKRA (SA)'],
-  ['name' => 'Growthties Consulting', 'url' => 'https://growthties.co.za/'],
+  // Waltons publish only a white-on-transparent logo, which disappears against
+  // this section. Their name renders as a wordmark until they supply a dark or
+  // full-colour file.
+  ['name' => 'Bidvest Waltons', 'url' => 'https://waltons.co.za/'],
+  ['name' => 'Konica Minolta', 'logo' => 'images/clients/konica-minolta.svg', 'url' => 'https://www.konicaminolta.com/'],
+  ['name' => 'DEKRA',          'logo' => 'images/clients/dekra.png',          'url' => 'https://dekraiol.co.za/'],
+  ['name' => 'Growthties',     'logo' => 'images/clients/growthties.png',     'url' => 'https://growthties.co.za/'],
 ];
 include 'includes/clients-section.php';
 ?>

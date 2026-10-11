@@ -162,7 +162,12 @@
 //   ['name' => 'Company Name', 'logo' => 'images/clients/company.png', 'url' => 'https://example.co.za'],
 // Logos live in images/clients/ — ideally transparent PNG or SVG, around
 // 400x160, with the artwork trimmed close to the edges.
-$client_logos = [];
+$client_logos = [
+  ['name' => 'Bidvest Waltons'],
+  ['name' => 'Konica Minolta SA'],
+  ['name' => 'DEKRA (SA)'],
+  ['name' => 'Growthties Consulting', 'url' => 'https://growthties.co.za/'],
+];
 include 'includes/clients-section.php';
 ?>
 

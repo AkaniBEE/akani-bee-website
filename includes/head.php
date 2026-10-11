@@ -431,6 +431,25 @@
     filter: grayscale(0%);
     opacity: 1;
   }
+  /* Fallback for a client with no logo file yet — the name set as a wordmark,
+     weighted to sit at roughly the same visual size as the logos beside it. */
+  .coss-marquee__wordmark {
+    display: block;
+    white-space: nowrap;
+    font-size: 1.125rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #52525b;
+    opacity: 0.7;
+    transition: color 0.3s ease, opacity 0.3s ease;
+  }
+  .coss-marquee__item:hover .coss-marquee__wordmark,
+  .coss-marquee__item a:focus-visible .coss-marquee__wordmark {
+    color: #1a1a2e;
+    opacity: 1;
+  }
+
   @keyframes coss-marquee {
     from { transform: translateX(0); }
     to   { transform: translateX(-50%); }
@@ -441,6 +460,7 @@
     .coss-marquee__track { animation: none; }
     .coss-marquee__set:nth-child(2) { display: none; }
     .coss-marquee__item img { filter: none; opacity: 1; }
+    .coss-marquee__wordmark { opacity: 1; }
   }
 </style>
 <!-- Alpine.js for interactivity -->

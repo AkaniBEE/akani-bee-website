@@ -23,8 +23,8 @@
  * aria-hidden and exists only so the loop can restart seamlessly at -50%.
  */
 if (!empty($client_logos)):
-  $clients_heading    = $clients_heading    ?? 'Trusted By';
-  $clients_subheading = $clients_subheading ?? 'Businesses that rely on our verification services.';
+  $clients_heading    = $clients_heading    ?? 'Some of our clients';
+  $clients_subheading = $clients_subheading ?? '';
 
   // With only a handful of logos the track would be narrower than the screen,
   // and translating it by -50% would scroll a visible gap across. Repeat the
@@ -40,7 +40,6 @@ if (!empty($client_logos)):
 <section class="py-16 lg:py-20 bg-muted overflow-hidden" aria-labelledby="clients-heading">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center">
-      <span class="text-primary text-sm font-semibold tracking-wider uppercase">Our Clients</span>
       <h2 id="clients-heading" class="mt-3 text-3xl font-bold text-secondary"><?= htmlspecialchars($clients_heading, ENT_QUOTES, 'UTF-8') ?></h2>
       <div class="mt-2 w-16 h-1 bg-primary rounded-full mx-auto"></div>
       <?php if ($clients_subheading): ?>
@@ -56,7 +55,7 @@ if (!empty($client_logos)):
         <?php for ($r = 0; $r < $repeat; $r++): ?>
         <?php foreach ($client_logos as $i => $c): ?>
         <?php $dup = ($copy || $r); // only the very first pass is read out ?>
-        <li class="coss-marquee__item"<?= $dup ? ' aria-hidden="true"' : '' ?>>
+        <li class="coss-marquee__item<?= !empty($c['dark']) ? ' coss-marquee__item--dark' : '' ?>"<?= $dup ? ' aria-hidden="true"' : '' ?>>
           <?php if (!empty($c['url'])): ?>
           <a href="<?= htmlspecialchars($c['url'], ENT_QUOTES, 'UTF-8') ?>" target="_blank" rel="noopener"
              <?= $dup ? 'tabindex="-1"' : '' ?>>

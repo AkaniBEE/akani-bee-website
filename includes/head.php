@@ -420,6 +420,14 @@
     align-items: center;
     justify-content: center;
   }
+  /* Some brands publish only a white-on-transparent logo, drawn for their own
+     dark header. Rather than recolour the mark, it gets the dark ground it
+     was designed for. */
+  .coss-marquee__item--dark {
+    background: #1a1a2e;
+    border-radius: 0.5rem;
+    padding: 0.7rem 1.15rem;
+  }
   .coss-marquee__item img {
     height: 3rem;
     width: auto;
@@ -435,6 +443,15 @@
     transform: translateY(-5px) scale(1.1);
     filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.16));
   }
+  /* on a chip, move the chip itself so the logo does not grow past its edge */
+  .coss-marquee__item--dark { transition: transform 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s ease; }
+  .coss-marquee__item--dark:hover,
+  .coss-marquee__item--dark:focus-within {
+    transform: translateY(-5px) scale(1.06);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.22);
+  }
+  .coss-marquee__item--dark:hover img,
+  .coss-marquee__item--dark a:focus-visible img { transform: none; filter: none; }
   /* Fallback for a client with no logo file yet — the name set as a wordmark,
      weighted to sit at roughly the same visual size as the logos beside it. */
   .coss-marquee__wordmark {
@@ -465,7 +482,8 @@
     .coss-marquee__item img,
     .coss-marquee__wordmark { transition: none; }
     .coss-marquee__item:hover img,
-    .coss-marquee__item:hover .coss-marquee__wordmark { transform: none; }
+    .coss-marquee__item:hover .coss-marquee__wordmark,
+    .coss-marquee__item--dark:hover { transform: none; }
   }
 </style>
 <!-- Alpine.js for interactivity -->

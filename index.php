@@ -163,10 +163,10 @@
 // Logos live in images/clients/ — ideally transparent PNG or SVG, around
 // 400x160, with the artwork trimmed close to the edges.
 $client_logos = [
-  // Waltons publish only a white-on-transparent logo, which disappears against
-  // this section. Their name renders as a wordmark until they supply a dark or
-  // full-colour file.
-  ['name' => 'Bidvest Waltons', 'url' => 'https://waltons.co.za/'],
+  // Waltons publish only a white-on-transparent logo, drawn for the dark header
+  // on their own site. 'dark' gives it that ground here instead of recolouring
+  // their mark; drop the flag if they ever supply a full-colour file.
+  ['name' => 'Bidvest Waltons', 'logo' => 'images/clients/waltons-white.svg', 'dark' => true, 'url' => 'https://waltons.co.za/'],
   ['name' => 'Konica Minolta', 'logo' => 'images/clients/konica-minolta.svg', 'url' => 'https://www.konicaminolta.com/'],
   ['name' => 'DEKRA',          'logo' => 'images/clients/dekra.png',          'url' => 'https://dekraiol.co.za/'],
   ['name' => 'Growthties',     'logo' => 'images/clients/growthties.png',     'url' => 'https://growthties.co.za/'],

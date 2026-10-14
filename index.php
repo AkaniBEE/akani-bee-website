@@ -168,7 +168,7 @@ $client_logos = [
   // their mark; drop the flag if they ever supply a full-colour file.
   ['name' => 'Bidvest Waltons', 'logo' => 'images/clients/waltons-white.svg', 'dark' => true, 'url' => 'https://waltons.co.za/'],
   ['name' => 'Konica Minolta', 'logo' => 'images/clients/konica-minolta.svg', 'url' => 'https://www.konicaminolta.com/'],
-  ['name' => 'DEKRA',          'logo' => 'images/clients/dekra.png',          'url' => 'https://dekraiol.co.za/'],
+  ['name' => 'DEKRA',          'logo' => 'images/clients/dekra-v2.png',          'url' => 'https://dekraiol.co.za/'],
   ['name' => 'Growthties',     'logo' => 'images/clients/growthties.png',     'url' => 'https://growthties.co.za/'],
 ];
 include 'includes/clients-section.php';
